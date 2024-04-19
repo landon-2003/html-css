@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Projeto</title>
+    <style>
+        :root{
+            --cor0: #c5ebd6;
+            --cor1: #83E1AD;
+            --cor2: #3ddc84;
+            --cor3: #2fab66;
+            --cor4: #1a5c37;
+            --cor5: #063d1e;
+            --fonte0: Arial,Helvetica,sans-serif;
+            --fonte1: 'Bebas Neue', cursive;
+            --fonte2: 'Android', sans-serif;
+        }
+        body{
+            font-family: var(--fonte0);
+            color: var(--cor0);
+            background-color: var(--cor1);
+        }
+        ul{
+            list-style-type: '\2714\0020\0020';
+            columns: 2;
+            list-style-position: inside;
+        }
+        div.video{
+            position: relative;
+            background-color: var(--cor4);
+            height: 0px;
+            margin-left: -20px;
+            margin-right: -20px;
+            margin-bottom: 15px;
+            padding-bottom: 59%;
+        }
+        div.video > iframe{
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="video">
+
+    </div>
+</body>
+</html>

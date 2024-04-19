@@ -1,0 +1,84 @@
+Anotações HTML E CSS:
+
+links:
+github.com/gustavoguanabara
+gustavoguanabara.github.io
+
+Aula 1: 
+
+Códigos:
+
+
+Anotações:
+
+comunicação entre computadores é baseada entre servidor e cliente, servidor fornece o dado após o cliente fazer uma solicitação.
+tcp do servidor quebra a mensagem e o tcp do cliente monta a mensagem.
+ip serve de indentificação do cliente e do servidor.
+http:hyper text transfer protocol.
+HTML:Hyper Text Markup Linguage.
+WWW:World Wide Web.
+
+HTML é focada em conteúdo.
+textos
+imagens
+videos 
+tabelas
+
+CSS é focada em estilo.
+cores
+sombras
+tamanhos
+posicionamentos
+
+JS é focado em interações.
+animações
+menus
+popups
+validações
+
+HTML
+
+códigos:
+<h1>Hello World</h1> uma tag quer transforma o que está dentro dela em um titulo no site.
+<p>Hello World</p> uma tag que transforma o que está dentro dela em um parágrafo para o site.
+<img src="foto.png" alt="exemplo de foto"> cria uma imagem no seu site da imagem que foi selecionada na src.
+
+anotações:
+a maioria das tags consistem em fechamento,conteúdo e abertura e algumas tem parâmetro como img com o src(source) e também tem valores como alt(alternativo),
+a estrutura básica para um documento html:
+<!DOCTYPE html> --estou desenvolvendo em html 5.
+<html lang="pt-br"> --abrindo a tag html e declarando a linguagem.
+    <head> --configurações do site.
+          <meta charset="UTF-8"> --permite a compatibilidade com acentuações.
+          <meta name="viewport" content="width=device-width,initial-scale=1.0"> --o site vai utilizar 100% do espaço.
+          <title>Document</title> --Titulo do site que aperece na parte de cima da guia.
+    </head>
+
+    <body> --a onde vai ser desenvolvido o site.
+          <h1>Hello World</h1> --tag de título usada no corpo do site.
+
+    </body>
+
+
+
+</html> -- fechando a tag html.
+
+
+<h1></h1> h1 refere-se a títulos.
+<p></p> p refere-se a parágrafos.
+<img> refere-se a imagens.
+
+CSS
+
+códigos:
+h1{
+font-family:Arial;
+font-size:20pt;
+color:blue;
+} este código pega o h1 declarado no html e alter sua fonte para arial, seu tamanho para 20 pontos e sua cor para azul.
+
+
+anotações:
+css são compostos de seletores,declaração,propriedade e valor pt(pontos) e px(pixels) são tamanhos a serem declarados,
+color por exemplo é uma propriedade quanto a blue seria o valor.
+cada declaração é um par de propriedade e valor, 
