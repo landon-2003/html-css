@@ -52,7 +52,7 @@ header > p{
     margin: auto;
     color: white;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
-    margin-bottom: 20px;
+    padding-bottom: 40px;
 }
 nav{
     background-color: var(--cor5);
