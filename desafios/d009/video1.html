@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: #1D1D1D;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 1.3em;
+        }
+        h1{
+            padding: 50px;
+        }
+        iframe{
+            display: block;
+        }
+        div.container{
+            position: relative;
+            padding: 20px;
+        }
+        div.conteudo{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Curso De JavaScript</h1>
+        <div class="container">
+            <div class="conteudo">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/BXqUH86F-kA?si=jUyLd6m0D2-vJKCr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+            <aside>
+                <a href="https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&pp=iAQB">Veja O Curso Completo</a>
+            </aside>
+        <div class="container">
+            <div class="conteudo">
+                <a href="index.html"><img src="imagens/voltar.png" alt="botão de voltar"></a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
