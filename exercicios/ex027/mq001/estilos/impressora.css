@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/*Estilo Para Impressões*/
+
+*{
+    margin: 10px;
+    padding: 10px;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+menu{
+    display: none;
+}
+
+article::after{
+    content: 'Esses artigo foi impresso através do site www.landon-2003.com';
+}
+
+article::before{
+    content: 'Impressão do artigo 29/04/2024';
+}
+
+article{
+    width: 100%;
+}
