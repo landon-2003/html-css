@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/* Todas As Demais Midias */
+
+/*Typical Devices Breakpoints
+Pequenas Telas:até 600px
+Celular: min 600px até 768px
+Tablet: min 768px até 992px
+Desktop: min 992px até 1200px
+Grandes Telas:min 1200px
+*/
+
+@media print {
+    main h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: none;
+    color: black;
+    }
+    main{
+        width: 90vw;
+        border: 2px solid black;
+    }
+    main::after{
+        content: "Essa impressão é de um site criado por Landon Hwas";
+        text-decoration: overline;
+        font-size: 1.5em;
+    }
+    img#tele {display: none;}
+    img#telv {display: none;}
+    img#impr {display: block;}
+    img#desk {display: none;}
+    img#tabl {display: none;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#tele {display: none;}
+    img#telv {display: none;}
+    img#impr {display: none;}
+    img#desk {display: none;}
+    img#tabl {display: block;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#tele {display: none;}
+    img#telv {display: none;}
+    img#impr {display: none;}
+    img#desk {display: block;}
+    img#tabl {display: none;}
+}
+
+@media screen and (min-width: 1200px){
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main{
+        width: 700px;
+    }
+    img#tele {display: none;}
+    img#telv {display: block;}
+    img#impr {display: none;}
+    img#desk {display: none;}
+    img#tabl {display: none;}
+}
