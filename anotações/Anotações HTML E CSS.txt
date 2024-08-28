@@ -1526,10 +1526,39 @@ sempre que usar transform colocar a linha no final do seletor pois isso impedir�
 
 Módulo 5
 
+Introdução
+
 Neste módulo iremos aprender flexblox e grid layout, são formas mais avançadas de mostrar conteúdo porém não tornam as outras box obsoletas, claro cada projeto tem sua necessidade e isso cabe ao dev resolver.
 Qual a forma da água? depende do recipiente(contêiner), o mesmo princípio se aplica as flexbox, flexbox serve por exemplo para evitar transbordamento que uma caixa sequencial de divs teria ao mudar sua forma, podemos fazer caixas adaptáveis por exemplo esticando, distribuindo e etc... o elemento pai o contêiner é agraciado com o display flex e os itens dentro receberão outras configurações, estes são chamados da child item item filho.
+
+Flex Direction
+
 Existem 4 configurações permitidas para containers de flex-direction a configuração padrão é flex-direction: row; ela faz uma direção de padrão em linha da esquerda para direita, caso usar flex-direction: row-reverse; ela faz uma direção de linha da direita para esquerda assim como a escrita oriental, para dispositivos verticais usamos flex-direction: column; em coluna ele é verticalmente de cima para baixo assim como o row temos a versão reverse que seria de baixo para cima, quando escolhemos criamos os eixos, o eixo principal é main-axis ele fera dois pontos um inicial e um final, chamamos eles de main-start e o main-end, também temos o eixo transversal ou cross-axis que também tem pontos os quais chamamos de cross-start e cross-end, no flex-direction: row; o main-axis é da esquerda para a direita e o cross-axis de cima para baixo, em caso de flex-direction: row-reverse; o main-axis se inverte sendo da direita para esquerda porém o cross-axis não tem alteração. 
 Para flex-direction: column; o main-axis fica de cima para baixo já o cross-axis fica da esquerda para a direita, e em caso de reverse o main-axis fica de baixo para cima e o cross-axis não sofre alteração, o main-axis sempre seguirá a direção do objeto ou melhor dizendo o container será direcionada pelo main-axis.
+
+Flex-Wrap(encapsulamento)
+
+Por padrão o flex-wrap está configurado como flex-wrap: nowrap; ou seja não encapsule, o encolhimento dos itens dentro de um flex-box depende da capacidade de encolhimento dele, o tamanho de um bloco depende do conteúdo que tem nele, flex-wrap: wrap;  ao diminuir demais o conteúdo ele irá quebrar no sentido do cross-axis,  podemos também usar o flex-wrap: wreap-reverse; o que é? quando ele quebrar será no sentido oposto do eixo cross-axis.
+
+Simplificação Do Flex
+
+Podemos simplificar tudo usando flex-flow(flex-direction+flex-wrap)a ordem é como ao lado primeiro Direction dps wrap.
+
+flex: auto; faz com que não haja espaço em branco dentro do contêiner.
+
+Justify-Content
+
+Justify-content ele vai fazer o alinhamento em relação ao main-axis, o valor que geralmente usamos é o justify-content: flex-start; ele está relacionado ao main-start, o primeiro item vai ficar grudado no main-start caso exista espaço livre sempre vai ficar junto do main-end,justify-content: flex-end; ele está relacionado ao main-end, o último item vai ficar grudado no main-end caso exista espaço livre sempre vai ficar junto do main-start, temos também o justify-content: center; que irá centralizar os itens no main-axis e o espaços em branco serão distribuídos de forma igual entre o main-start e o main-end, alinhamentos de espaçamento, justify-conten: space-between; ele irá colocar o primeiro item no main-start e o último item no main-end todos os outros itens vão estar no centro com o espaçamento distribuído por igual, temos também jutify-content: space-evenly; não irá grudar o primeiro e o último elemento nas extremidades ele vai colocar os elementos dentro do container para que antes e depois independente de ser o primeiro ou o último tenha espaços de forma igual, justify-content: space-around; ele não gruda os elementos nas extremidades e divide o espaço pela quantidade de elementos reservando espaços de tamanhos iguais e dentro desses espaços ele irá centralizar o conteúdo tendo espaço atras e a frente do item, sendo assim tem espaços duplos entre dois elementos o fim do espaço anterior e o inicio do espaço do elemento posterior.
+
+Align Itens
+
+align-itens ele vai fazer o alinhamento em relação ao cross-axis, por padrão o align-itens tem o valor stretch(esticar), existe também o flex-start que alinha os itens com o cross-start, obviamente também existe o flex-end que cola os itens ao cross-end, exite também o center para centralizar os itens na área central do cross-axis porém, não exite os spaces. 
+
+Resumindo um pouco está aula o justify-content alinha junta ao main-axis e o align-itens alinha junto ao cross-axis.
+
+Centralização Absoluta Com Flex Box
+
+
 
 
 
