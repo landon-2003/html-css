@@ -1523,3 +1523,14 @@ CTRL+D multi seleção
 
 focus-within permite quando o objeto esteja em foco alterar algumas configurações relacionadas a ele como por exemplo um input de texto selecionado.
 sempre que usar transform colocar a linha no final do seletor pois isso impedirá bugs em alguns dispositivos.
+
+Módulo 5
+
+Neste módulo iremos aprender flexblox e grid layout, são formas mais avançadas de mostrar conteúdo porém não tornam as outras box obsoletas, claro cada projeto tem sua necessidade e isso cabe ao dev resolver.
+Qual a forma da água? depende do recipiente(contêiner), o mesmo princípio se aplica as flexbox, flexbox serve por exemplo para evitar transbordamento que uma caixa sequencial de divs teria ao mudar sua forma, podemos fazer caixas adaptáveis por exemplo esticando, distribuindo e etc... o elemento pai o contêiner é agraciado com o display flex e os itens dentro receberão outras configurações, estes são chamados da child item item filho.
+Existem 4 configurações permitidas para containers de flex-direction a configuração padrão é flex-direction: row; ela faz uma direção de padrão em linha da esquerda para direita, caso usar flex-direction: row-reverse; ela faz uma direção de linha da direita para esquerda assim como a escrita oriental, para dispositivos verticais usamos flex-direction: column; em coluna ele é verticalmente de cima para baixo assim como o row temos a versão reverse que seria de baixo para cima, quando escolhemos criamos os eixos, o eixo principal é main-axis ele fera dois pontos um inicial e um final, chamamos eles de main-start e o main-end, também temos o eixo transversal ou cross-axis que também tem pontos os quais chamamos de cross-start e cross-end, no flex-direction: row; o main-axis é da esquerda para a direita e o cross-axis de cima para baixo, em caso de flex-direction: row-reverse; o main-axis se inverte sendo da direita para esquerda porém o cross-axis não tem alteração. 
+Para flex-direction: column; o main-axis fica de cima para baixo já o cross-axis fica da esquerda para a direita, e em caso de reverse o main-axis fica de baixo para cima e o cross-axis não sofre alteração, o main-axis sempre seguirá a direção do objeto ou melhor dizendo o container será direcionada pelo main-axis.
+
+
+
+
