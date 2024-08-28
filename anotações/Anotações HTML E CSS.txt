@@ -3,10 +3,27 @@ Anotações HTML E CSS:
 links:
 github.com/gustavoguanabara
 gustavoguanabara.github.io
+emojipedia.org 
+(Sites Com Imagens De Uso Público
+unSplash
+Pexels
+Freepik
+Rawpixel
+Pixabay
+Libreshot
+Wikimedia Commons)
+(sites para criar Favicon:
+iconarchive
+favicon.cc
+favicon.io)
+(Ótimo conversor:
+https://handbrake.fr/downloads.php)
+(Ótimo site para harmonizar cores:
+https://color.adobe.com/pl/)
+(Site para descobrir o código hexadecimal de uma cor:
+plug_in Colorzilla)
 
 Aula 1: 
-
-Códigos:
 
 
 Anotações:
@@ -42,6 +59,12 @@ códigos:
 <h1>Hello World</h1> uma tag quer transforma o que está dentro dela em um titulo no site.
 <p>Hello World</p> uma tag que transforma o que está dentro dela em um parágrafo para o site.
 <img src="foto.png" alt="exemplo de foto"> cria uma imagem no seu site da imagem que foi selecionada na src.
+<br> quebra a linha do texto.
+<link rel="shortcut icon" href="Imagens/html.ico.ico" type="image/x-icon"> como criar um favicon para seu site.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/100px-Instagram_logo_2016.svg.png" alt="Logo Instagram"> como colocar uma imagem por meio de uma url.
+<img src="imagens/whatsApp-250.png" alt="Logo Whatsapp"> como colocar uma imagem por meio da linkagem de um aquivo na mesma pasta do html.
+<p>&#x1F604</p> como colocar um emoji em seu texto.
+<p>&lt;p&gt; e &lt;/p&gt;</p> como colocar < e > respectivamente em seu texto.
 
 anotações:
 a maioria das tags consistem em fechamento,conteúdo e abertura e algumas tem parâmetro como img com o src(source) e também tem valores como alt(alternativo),
@@ -56,17 +79,206 @@ a estrutura básica para um documento html:
 
     <body> --a onde vai ser desenvolvido o site.
           <h1>Hello World</h1> --tag de título usada no corpo do site.
-
+ 
     </body>
-
-
-
 </html> -- fechando a tag html.
+
+
+para colocar "códigos" no site temos que usar códigos que remetem a < ou > no caso seriam respectivamente  &lt; e &gt;.
+Imagens são perfeitas para se expressar porém temos que tomar cuidado com direitos autorais além de cuidar o tipo de imagem a ser utilizada, JPG é bom para ser utilizado entre 20% e 50%, PNG é bom apenas quando haver necessidade de transparência na imagem porém é mais pesada.
+tamanho de imagem bom para fundo de site 1200 e para conteúdo 650,sempre é bom usar o GIMP para redimensionar a imagem.
+imagens muito grandes geram peso pro site demorando para carregar.
+é possivel também carregar imagens externas por meio da URL dentro do source.
+para usar uma sub-pasta no source do img deve se colocar o nome de uma pasta seguido de um "/".
+CTRL+SPACE permite selecionar um arqueivo da pasta dentro de um source.
+Hierarquia De Títulos os headings possuem 6 níveis de hierarquia, esses níveis servem para organizar nosso conteúdo.Para isso usamos as Tags <h1>,<h2>,<h3>,<h4>,<h5> e <h6> para demarcar nossos títulos.
+H1 significa que esse é o texto principal ao qual vamos escrever,H2 significa que esse é o sub-assunto do H1 que está imediatamente acima,H3 significa que é um sub-assunto do H2 que está acima e assim sucessivamente até o H6.
+Bom para treino de textos seriam os "Lorem Ipsum". 
+Usando o site w3.org é possível encontrar Tags obsoletas no HTML 5 estas tags funcionam por enquanto porém podem acabar por parar de funcionar a qualquer momento.
+Para usar estilos deve-se colocar a tag <style> na parte do <head> html é baseado em conteúdo e semântica porém css é baseada em estilo.
+as tags <strong> e <em> servem respectivamente para deixar o texto em negrito e itálico.
+Para fazer marcação em um texto como um marca texto deve-se usar a tag <mark>.
+A tag <big> já está depreciada pelo html5 porém a tag <small> ainda está firme e forte, ambas tem a mesma lógica porém por algum motivo big que deixa o texto maior não está mais entre as tags a serem utilizadas diferente de small que deixa o texto menor.
+Para adicionar uma característica a um códigos basta selecionar ele com o mouse e apertar CTRL+SHIFT+P e digitar abb.
+<del> que significa que o texto que está sendo lido deve ser desconsiderado pelo leitor.
+<ins> é usado para sublinhar de forma semântica.
+para alterar a cor do marcador basta adicionar um parâmetro style com background color e a cor desejada. Porém desta forma já está utilizando CSS. Para alterar todos os marks com uma cor especifica basta ir até o head da pagina abrir uma tag style e declarar um seletor para mark.
+Para criar um texto maior é recomendado a criação de um seletor e usar CSS.
+Pode-se usar as tags <sub> e <sup> para fazer textor sobrescritos e subscritos.
+Para usar códigos de programação em seus sites é recomendado o uso da tag <code> e para formatar o código é recomendado o uso da tag <pre>.
+SHIFT+TAB é bom para eliminar os espaços em branco sem danificar o código.
+Para citações deve-se usar a tag <q> ou para citações mais longas a tag <blockquote>.
+Para abreviações é uma boa usar a tag <abbr> para citar do que seria a abreviação.
+Para citar palavras invertidas é útil a tag <bdo>.
+Para listar itens no HTML podemos usar listas ordenadas representadas pela tag <ol> e para indentificar cada item devemos usar a tag <li>.
+por exemplo:
+   <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ol>
+
+A tag <ol> possuí o parâmetro type onde configuramos o tipo de marcador de lista atual. As opções de valores para esse parâmetro são:
+1 - valor padrão cria listas númeradas...
+A - cria listas alfabéticas em maiusculas...
+a - cria listas alfabéticas em minúsculas...
+I - cria listas em algarismos romanos em maiusculas...
+i - cria listas em algarismos romanos em minúsculas...
+
+Você também pode indicar o início da contagem usando o parâmetro start por exemplo a tag <ol type="I" start ="5"> vai gerar itens númerados como V,VI,VII etc...
+Já as listas desordenadas ou de marcadore,que são aquelas que a ordem dos itens não influenciará no significado da lista. Ela é apenas uma ótima maneira de organizar os itens que não apresentam uma classificação necessariamente, ela é caracterizada pela tag <ul> e também usa <li> para seus itens.
+O marcador padrão da <ul> são as bolinhas pretas totalmente preenchida mas também é possível alterar isso usando a propriedade type na <ul> com os seguintes valores:
+
+ Disc - Padrão, bola preta totalmente pintada.
+ Circle - Uma bola com uma borda preta sem preenchimento.
+ square - Um pequeno quadrado preto totalmente pintado
+
+Podemos criar listas mistas, configurando listas dentro de outras listas. Veja o exemplo a seguir:
+<ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <ol type="a">
+            <li>Item 2.1</li>
+            <li>Item 2.2</li>
+            <li>Item 2.3</li>
+            <li>Item 2.4</li>
+        </ol>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ol>
+As listas internas sempre terão deslocamento para direita.
+Listas de Definições é como se fosse um dicionário, temos termos e descrições. É uma lista sem demarcadores, mas bem útil em alguns casos.
+Toda lista de definições está dentro de uma tag <dl>(definition list) cada termo é um <dt>(definition term) e cada descrição é um <dd>(definition description) assim como os <li> os <dt> e <dd> possuem fechamento opcional.
+Exemplo:
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem De Marcação Utilizada Para Criar O Conteúdo De Sites.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem De Marcação Para A Especificação De Estilos Em Sites.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem De Programação Para Criar Interatividade Em Sites.</dd>
+    </dl>
+
+Ligações, estas são feitas por meio dos hyperlinks, para criar um hyper link devemos criar âncoras utilizando a tag <a> o principal atributo desta tag é o href="", que cria uma referência hipertexto.Vamos ver um exemplo simples:
+    <h1>Vamos Criar um link</h1>
+    <a href="https://www.youtube.com/watch?v=X5WjKpilICM&pp=ygUcbWVtZSBkbyBjYXJhIGNhbnRhbmRvIGluZ2xlcw%3D%3D">Clique Aqui</a>
+
+Outro atributo muito útil da tag âncora é o hreflang, que permite indicar qual é o idioma principal do site para onde o link está desviando o fluxo de navegação. Isso vai permitir avisar o navegador e o software de tradução como lidar caso o visitante opte por traduzir automaticamente os conteúdos.
+Por padrão, sempre que o visitante clicar no hyperlink o site destino abre na mesma janela do site que continha esse link. Ou seja, o conteúdo anterior vai deixar de ser exibido para mostrar o novo conteúdo.
+Esse é um comportamento desejado quando o visitante vai continuar a visitar nosso site, apenas mudando de um documento para outro. Mas e quando um clique leva ao visitante para outro site e provavelmente ele nunca mais voltará para o nosso site?
+Para poder controlar onde o site destino irá abrir, podemos usar o atributo "Target" que suporta os seguintes valores:
+
+_blank vai abrir o link em uma nova janela em branco.
+_self vai abrir o link na janela ou frame atual(padrão).
+_top vai desfazer todos os frames e abrir o destino no navegador completo. 
+_parent similar ao uso do _top em uma referência à uma janela mãe.
+nome-do-frame caso esteja usando frames, indicar o nome da janela a abrir.
+
+como o uso dos frames é uma técnica quase me desuso, vamos nos basear apenas nas duas primeiras opções _blank e _self.
+   <a href="pagina2.html" target="_self">continuar navegando no site</a>
+   <a href="https://www.w3schools.com/sql/sql_datatypes.asp" target="_blank">Abrir o W3school em uma nova janela</a>
+
+Existe um recurso bem interessante para links que é indicar qual é a natureza do destino usando o atributo rel. Esse atributo aceita vários valores entre eles:
+next indica que o link é para a próxima parte do documento atual.
+prev indica que o link é para a parte anterior do documento atual.
+author indica que é um link para o site do autor do artigo atual.
+external indica que é um link para outro site que não faz parte do site atual.
+nofollow indica que é um link para um site não endossado, como um link pago.
+    <a href="pagina2.html" target="_selft" rel="next">continuar navegando no site</a>
+
+    <a href="https://www.w3schools.com/sql/sql_datatypes.asp" hreflang="en" target="_blank" rel="external">abrir este site em uma nova janela</a>
+
+No código anterior o primeiro link é o que chamamos de link local ou link interno, já que ele leva o visitante a outra página detro do nosso site. Note que não é necessário nem indicar a URL completa nesses casos.
+
+Já o segundo link vai nos levar para um outro site, o que chamamos de link externo, nesses casos, devemos indicar a URL completa, incluindo o protocolo http:// ou https:// e o caminho leva à uma página específica, se for necessário.
+
+Para linkar páginas é importante usar os atalho CTRL+SPACE e também usar ./ e ../ para retornar de páginas dentro de pastas diferentes.
+
+E para fazer downloads? Outra coisa que aparece bastante em sites são os links para efetuar downloads de algum material em pdf, ou de um arquivo zip qualquer, A partir da versão html 5, as âncoras receberam atributos especiais para isso. Basta fazer o link diretamente para o arquivo que se deseja efetuar o download e adicionar o atributo "download" com o valor configurado para o nome do arquivo a ser baixado e o atributo type para indicar ao navegador que tipo de arquivo está sendo baixado vamos ver um exemplo:
+
+<a href="arquivos/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixe Aqui O PDF Do Meu Livro</a>
+
+Aqui estão alguns media types bem usado no nosso dia-a-dia:
+
+application/zip   video/mp4    audio/mpeg
+text/html         video/h264   fonl/llf
+text/css          video/jpeg   image/jpeg
+text/javascript   audio/aac    image/png
+
+Imagens, Videos e Áudios
+Sites devem ser responsivos para todas as plataformas e para isso fucnionar deve-se tornar ele responsivo e o primeiro passo para isso é aprender a utilizar a tag source e a tag picture.
+
+Para esse exemplo, criamos as três imagens ao lado, a menor tem 300x300px, a média tem 700x700px e a maior tem 1000x1000px, usamos o programa gimp, que é um editor de imagens 100% gratuito, essas imagens serão carregadas pelo navegador de acordo com o tamanho da janela atual. Para isso, criamos o seguinte código base:
+
+    <picture>
+        <source media="(max-with: 1050px)" srcset="wolfs-700.png" type="image/png">
+        <img src="wolfs-1000.png" alt="A Imagem Flexível Funciona">
+    </picture>
+Note que a tag source possui 3 atributos:
+
+type vai indicar o media type da imagem que usamos
+
+srcset vai configurar o nome da imagem que será carregada quando o tamanho indicado for atingido.
+
+media indica o tamanho maximo a ser considerado para carregar a imagem indicada no atributo srcset.
+
+É sempre bom colocar um valor ligeiramente maior na max-width para resultados mais interessantes.
+Após colocar mais um source media o site fica ainda mais responsivos.
+
+    <picture>
+        <source media="(max-width:740px)" srcset="wolfs-300.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="wolfs-700.png" type="image/png">
+        <img src="wolfs-1000.png" alt="A Imagem Flexível Funciona">
+    </picture>
+
+É importante que exista uma ordem entre os <source>, e nessa configuração os itens mais acima sejam os menores tamanhos para max-width e que os seguintes sejam os maiores, de forma crescente, O último item dentro de <pictures> deve ser a imagem padrão.
+
+Vamos falar sobre áudio:
+Com o HTML 5, veio também a facilidade em compartilhar áudio nos nossos sites sem depender necessariamente de JS ou plugins extras. A partir de agora, bas uma tag <audio> e alguns source para fazer seu site ser capaz de tocar qualquer áudio.
+Vamos analisar os principais atributos de uma tag áudio antes de mais nada:
+
+o atributo preload indica se o áudio será pré-carregado ou não aceita três valores:
+	     metadata vai carregar apenas informações sobre o arquivo (tamanho,tempo,informações de direitos, etc...)
+	     none não vai carregar absolutamente nada até que o usuário clique no botão play ou um script inicie a reprodução.
+	     auto(padrão) vai carregar o arquivo de áudio inteiro assim que a página for carregada, mesmo que o usuário nunca aperte o play.
+
+O atributo controls vai apresentar o player na tela. Caso não seja colocado na tag <audio>,o controle será transparente e o usuário não poderá interagir com ele.
+O atributo autoplay, quando inserido, vai iniciar a reprodução do áudio assim que a página for carregada.
+O atributo loop vai fazer com que o áudio seja repetido eternamente assim que terminar sua reprodução.
+
+Dentro da tag <audio>, adicionamos vários <source> com formatos diferentes do mesmo áudio. Coloque na parte de cima o seu formato favorito. Os demais só serão carregados caso o de cima falhe. caso todos falhem, criamos um parágrafo que permite download do arquivo mp3 para ouvir no player padrão do dispositivo.
+
+E os Videos?
+Para inserir um vídeo em nosso site, podemos utilizar a nova tag <video> do html 5, caso o arquivo esteja hospedado no nosso próprio servidor.
+Antes de mais nada, vamos criar a tag <video> e configurar alguns atributos importantes.
+
+    <h2>video</h2>
+    <video width="300" poster="thumb.jpg" controls autoplay>
+        <source src="videoteste.mp4" type="video/mp4">
+        <p>Infelizmente seu navegador não conseguiu carregar o 	video</p>
+    </video>
+
+width vai indicar a largura que o video vai ter na tela por exemplo "600px".
+poster configura uma imagem que vai aparecer como uma capa, enquanto o visitante não aperta o play do vídeo.
+controls vai configurar se os controles do video vão aparecer na parte inferior da midia. Por razão, os controles não aparecerão, mas basta colocar a palavra controls na tag videos.
+autoplay diz para o navegador se o video vai começar a tocar automaticamente, assim que a página for carregada.
+Hospedar seus próprios videos pode ser caro pois o tráfego aumenta para cada video reproduzido por cada usuário. É preciso tomar cuidado ao guardar nossos videos.
+E como contornar esse problema? Simples usando Youtube ou Vimeo para hospedar seus videos. Youtube tem servidores ultra rápidos porém pode ser uma dor de cabeça pois a ideia do youtube é deixar todos seus videos públicos ou disponíveis, o que pode ser uma dor de cabeça para conteúdos privados.
+Vimeo resolve o problema anterior, Ele permite limitar quem vai poder ver seus vídeos, o que é especialmente vantajoso para quem quer criar produtos em forma de vídeo, como desvantagem é que ele é pago por uma taxa anual e seus algoritmos não são tão rápidos  quanto os do youtube.
+Para incorporar videos que subiu no youtube ou vimeo existem recursos que te dão o código pronto no HTML5.
+No youtube abra o video e clique em compartilhar e escolha o item incorporar.
+O código HTML personalizado vai aparecer em uma nova janela um exemplo de código seria:
+    <h2>Teste Video Youtube:</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7PcMlAZJVJQ?si=_HfaqvKMfmA-JEgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 <h1></h1> h1 refere-se a títulos.
 <p></p> p refere-se a parágrafos.
 <img> refere-se a imagens.
+<br> quebra a linha.
 
 CSS
 
@@ -81,4 +293,1233 @@ color:blue;
 anotações:
 css são compostos de seletores,declaração,propriedade e valor pt(pontos) e px(pixels) são tamanhos a serem declarados,
 color por exemplo é uma propriedade quanto a blue seria o valor.
-cada declaração é um par de propriedade e valor, 
+cada declaração é um par de propriedade e valor, Introdução as CSS:
+Vamos começar pela parte mais básica de aplicar CSS para aplica-la em partes específicas de nosso site. Usando CSS dentro de parâmetros de html5. Crie mais uma pasta dentro de sua área de exercícios e crie um arquivo index.html.
+Crie o código a seguir:
+    <h1>Capítulo 1</h1>
+    <h2>Capítulo 1.1</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus doloremque nihil illum nesciunt debitis quas ipsa dicta molestiae. Distinctio numquam sit deleniti maxime quae veritatis excepturi ducimus illum deserunt dignissimos.</p>
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid neque eveniet obcaecati saepe accusantium vero dicta praesentium ea in! Nihil totam ullam at quaerat aperiam sunt debitis eos illo nemo.</p>
+    <h1>Capítulo 2</h1>
+    <h2>Capítulo 2.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ullam incidunt unde, quod vitae quas reiciendis beatae excepturi blanditiis quisquam hic ipsum cum, odit numquam, totam cupiditate laborum amet iure.</p>
+
+Vamos começar nos focando na tag body e aplicando um estilo diferente ao corpo da página. Adicione o parâmetro style e digite as duas declarações font-family e color, conforme este código:
+
+<body style="font-family: Arial, Arial, Helvetica, sans-serif; color: blue;">
+
+Mas cuidado ao digitar este código, Tudo deve ser seguido exatamente como fizemos acima, inclusive com letras maiúsculas e minúsculas. Não esqueça de adicionar os pontos e virgulas para separar as declarações. 
+Note que o formato da letra mudou(era times e ficou em arial) e a cor da fonte também foi alterada para azul. Se por acaso de alguma coisa não funcionou reveja seu código, o computador necessita de ordens claras e seguindo diversas regras.
+Vamos fazer agora uma alteração no primeiro H1 do nosso código.
+  
+  <h1 style="color: red;">Capítulo 1</h1>
+
+O titulo deve ficar vermelho.
+Note que apens o primeiro H1 ficou vermelho, o segundo segue azul, isso acontece pois estamos fazendo configurações pontuais com css.
+Utilizando CSS internal style:
+Para aplicar estilos de forma mais dinâmica e prática, podemos adicionar uma tag <style> dentro do <head> no nosso HTML, tente isso:
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando CSS</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightcyan;
+            color: blue;
+        }
+        h1{
+            color: green;
+        }
+    </style>
+</head>
+
+Lembre-se as configurações pontuais sempre vão prevalecer sobre as configurações gerais. volte ao código e romava todas as configurações de style dentro da tag body e H1.
+A técnica mais versátil seria o css external style, manter as folhas de estilo fora do código HTML, além de uma maior organização faz com que tudo seja reaproveitado da maneira mais eficiente nas outras páginas do nosso site, para isso, utilizamos a tag <link> especialmente configurada para trabalhar com aquivos externos de estilo. Essa tag deve ser colocada dentro da área <head> do seu html.
+
+    <link rel="stylesheet" href="style.css">
+
+A linha linha com o <link> pode estar em qualquer linha, contanto que seja dentro do <head>, uma boa opção é sempre colocar ela abaixo do <title>.
+Um bom atalho é colocar link CSS e depois ir até a referencia e colocar ou mouse acima dela, logo depois pressione CTRL+CLIQUE e o próprio VSCode vai perguntar se você quer que ele crie a pasta por você. 
+@charset "UTF-8";(caso haja problemas com acentuação).
+Para comentar basta usar /* */.
+
+@charset "UTF-8"; /*Comentário*/
+
+body{
+    background-color: lightgoldenrodyellow;
+    color: chocolate;
+    font-size: 12pt;
+    font-family: Arial;
+}
+
+h1{
+    color: brown;
+}
+
+a{
+    color: brown;
+    text-decoration: none;
+}
+
+Na linha 1 colocamos uma regra em CSS, que vai indicar a compatibilidade com o padrão utf-8.
+
+Na linha 2, adicionamos um comentário para facilitar a documentação do arquivo. Os comentários assim como no HTML só servirão de explicação para que o desenvolvedor entenda o funcionamento de uma determinada linha ou trecho de um código.
+
+Nas demais linhas apenas fizemos as configurações dos seletores.
+Basicamente:
+CSS Externo:Use sempre que possível.
+CSS Interno:Usem em pequenas configurações.
+CSS Inline:Procure evitar.
+
+Importância das cores,ter cores harmoniozas em seu site ajudam na retenção dos usuários e venda de produtos.
+Podemos gerar gradientes e aplicarmos a componentes visuais usando as folhas de estilo. Vamos usar um exemplo simples no nosso exercício atual. vá até o body e crie uma declração do nosso seletor body.
+
+body{ font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(90deg, yellow, red);
+    color: black;
+}
+
+Pode parecer esquisito no início, mas um gradiente é considerado pelo navegador como se fosse uma imagem, por isso usamos a propriedade background image na declaração CSS. A função linear gradient é auto-explicativa e gera gradiente linear angular. O primeiro parâmetro da função, indica o Ângulo de inclinação de 90 graus(90deg) e as seguintes indicam as cores degradê a ser criado, Você pode indicar quantas cores quiser e o navegador vai saber se virar para gerar seu degradê personalizado.
+0deg- baixo para cima
+180deg - cima para baixo
+90 - direita para esquerda
+-90 - esquerda para direita
+60 - diagonal baixo para cima direita para esquerda
+-60 - diagonal cima para baixo esquerda para direita
+
+Também é possível criar os chamados gradientes radicais, que também são meio auto-explicativos.
+
+body{ font-family: Arial, Helvetica, sans-serif;
+    background-image: radial-gradient(circle, red 33%,yellow 33%,green 33%);
+    color: black;
+}
+
+É possivel representar cores de quatro formas, RGB, Hexadecimal, Nomes e HSL e é possível configurar também transparência por meio do RGBA, HSLA.
+Porcentagem oferece a possibilidade de personalizar a quantidade de cada cor.
+
+Circulo Cromático
+12 cores principais:
+Cores Primarias:
+Amarelo
+Vermelho
+Azul
+Cores Secundárias:
+Laranja
+Violeta
+Verde
+Cores Terciarias:
+amarelo-esverdeado
+amarelo-alaranjado
+vermelho-alaranjado
+vermelho-arroxeado
+azul-arroxeado
+azul-esverdeado
+Temperatura das cores:
+cores frias:
+verde ao roxo
+cores quentes:
+amarelo ao vermelho
+
+Paleta De Cores:
+De três a cinco cores preferivelmente 4.
+
+Cores Complementares:
+Constraste:a cor que está na direção oposta do circulo cromático.
+
+Cores Análogas:
+Cores imediamente ao lado no círculo cromático.
+
+Cores Análogas Relacionadas:
+2 cores vizinhas pula uma e pega a outra cor logo após.
+
+Cores Intercaladas:
+Escolha uma pula uma escolhe outra e pula novamente.
+
+Monocromia:
+Modificar saturação e o brilho.
+
+Pelo adobe color podemos extrair paletas de imagens e etc...
+Paletton.com permite criar exemplos de sites em algumas paletras para ver o exemplo pré pronto.
+
+Para fixar um backgound use background-attachment: fixed;
+Fontes Nos Estilos:
+
+Seletores personalizados em css:
+Agora que nós já passamos pelos elementos mais importantes no design, que são cores e fontes, vamos falar um pouco sobre formatações especiais que vão permitir organizar esses conteúdos na tela, indicando seus tamanhos, espaçamentos, sombras e tudo mais. Eu te convido a aprender maneiras que vão facilitar no desenvolvimento web de sites eficientes e bonitos.
+Para começar a dar mais poder para as CSS, criando estilos personalizados, precisamos aprender a utilizar os seletores de id(#) e de class(.) de maneira eficiente. Ao criar nosso conteúdo em HTML, podemos indentificar um determinado elemento único com um id, ou agrupar elementos múltiplos que tenha características semelhantes com um class. Vamos olhar um exemplo simples de documento HTML, com propriedades indentificadoras:
+
+<body>
+    <h1 id="titulo-principal">Aprenda Desenvolvimento Web</h1>
+    <h1>Aprenda HTML</h1>
+    <h2 class="topico">Semântica Web</h2>
+    <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem doloremque molestias explicabo iste voluptatibus. Ducimus ab error harum ad voluptas iure natus, tempora vel tempore doloribus quasi quaerat maxime beatae.</p>
+    <h1>Aprenda CSS</h1>
+    <h2 class="topico">Estilos Web</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates nostrum ut quo, eaque repudiandae commodi beatae laudantium ducimus eius, est natus, inventore voluptatum excepturi autem eligendi error alias quam sequi.</p>
+</body>
+
+Olhando atentamente para o primeiro H1 vimos que ele se diferencia dos demais, pois ele possui um id.
+Agora foque sua atenção nas linhas com H2 e perceba que ambos possuem o mesmo class.
+Um id vai identificar um elemento único dentro da página atual, essa identificação vai nos permitir criar um estilo especial para um elemento isolado. Já um class vai identificar uma classe à qual um ou mais elementos pertençam, compartilhando características em comum a todos que façam parte desse grupo.
+Em um documento HTML só podemos usar um id para um único elemento, o que significa que não podemos ter dois elementos com um mesmo id dentro da mesma página. Porém, podemos atribuir um mesmo class para vários elementos que possuam está mesma característica.
+Em seguida, baseado no HTML anterior vamos criar um estilo local criando uma área <style> dentro da seção <head> do documento atual.
+
+    <style>
+        body{
+            font: normal 1em Arial, Helvetica, sans-serif;
+        }
+        h1{
+            font-size: 2em;
+            color: darkgreen;
+        }
+        h2{
+            color: green;
+        }
+    </style>
+
+o que fizemos foi criar configurações simples de estilo baseadas nos elementos body, H1 e H2 do nosso HTML. Até o momento, não fizemos nenhuma configuração personalizada para nenhum seletor, o resultado é bem previsível.
+Perceba no resultado que os dois primeiros títulos possuem apresentação idênticas, mesmo que o primeiro deles possua um id.
+Isso aconteceu porque não fizemos nenhuma configuração específica para ele. Não adianta colocar apenas um id ou class em um elemento e não personalizar o resultado visual usando seletores personalizados
+
+Agora vamos adicionar algumas declarações personalizadas, ainda dentro da área style que criamos.
+
+        #titulo-principal{
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+        }
+        .topico{
+            text-align: right;
+        }
+        .texto{
+            text-align: justify;
+        }
+
+No código acima, criamos seletores com simbologias novas, isso porque não são seletores para elementos html, e sim seletores para id e class. Na primeira parte criamos um seletor personalizado para o indentificador titulo-principal, que está atribuido ao h1. Você deve lembrar que colocamos o simbolo # antes do id.
+
+Já as linhas seguintes são seletores que receberão declarações para as classes topicos e texto. Todos os seletores personalizado para uma classe são indentificados por um ponto que vem antes do nome da classe.
+
+Olhe para os dois códigos e note as diferenças.
+
+Propriedades Herdadas: Anteriormente discutimos três técnicas usadas para aplicar estilos em nossos html:inline,local e externa.Durante os nossos vídeos de acompanhamento do material em pdf demonstramos que as 3 técnicas podem ser usadas e,os estilos de cada serão combinados nesta ordem:
+
+1° lugar:CSS Externo.
+2° lugar:CSS intero/local.
+3° lugar:CSS inline.
+
+Sendo assim caso haja duplicidade nas configurações, o que fica valendo no final é a propriedade especificada nas configurações inline. Cada camada de aplicação de estilos vai adicionando propriedades novas e sobrescrevendo as configurações de nivel anterior.
+Quando nós aplicamos configurações personalizadas de id ou de class, também vai existir uma combinação de configurações, como você já deve ter percebido ao analisar o exemplo que apresentamos nas páginas anteriores.
+
+Voltando ao exemplo dado anteriormente logo no inicio do corpo tinhamos dois elementos h1:
+
+    <h1 id="titulo-principal">Aprenda Desenvolvimento Web</h1>
+    <h1>Aprenda HTML</h1>
+
+Logo em seguida, na área de estilo, criamos uma configuração especial para os elementos h1:
+
+h1{
+	font-size: 2em;
+	color: darkgreen;
+}
+
+essas duas configurações de tamanho e cor de onte serão aplicadas aos dois títulos, já que ambos são do tipo h1. Por fim, adicionamos uma configuração específica para o elemento que tem um id personalizado:
+
+        #titulo-principal{
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+        }
+Dessa maneira, o primeiro h1 do código html(aquele que tem um id) ganhará mais três configurações - cor de fundo, cor da fonte e alinhamento de texto - graças a esse seletor extra. Note que na primeira configuração CSS dos elementos h1. Dissemos que a cor era darkgreen.
+
+Porém, quando aplicamos a segunda configuração de color no seletor #tituloprincipal, ela vai sobrescrever o valor da propriedade para white. As outras duas propriedades(background-color e text-align) serão adicionadas ás configurações desse primeiro título. O segundo título não sofrerá alterações, já que apenas o primeiro possui o id referido ao seletor.
+
+Pseudo-classes e Pseudo-elementos
+Uma pseudo-classe CSS é uma palavra-chave adicionada ás declarações de um seletor após dois sinais de dois pontos e especificaram um estado especial de um elemento.
+Existem várias pseudo-classes para estilos, podemos citar :hover,:visited,:active,:checked, :empty e :focus.
+
+Já pseudo-elementos CSS é uma palavra-chave adicionada às declrações de um seletor após dois sinais de dois pontos e permitem que você formate um pedaço específico do elemento referenciado. Os principais pseudo-elementos usados nas CSS são ::before,::after,::first line.
+
+Vamos começar criando um exemplo bem simples e bastante usado para exemplificar o uso de pseudo-classes e pseudo-elementos: a personalização de links.
+
+    <h1>Personalizando Links</h1>
+    <p>Para aprender HTML5 e CSS3, acesse o <a href="https://gustavoguanabara.github.io">GitHub Do Guanabara</a></p>
+    <p>Se quiser conhecer mais sobre padrões, visite o site do <a href="https://www.w3c.br">Escritório Do W3C no Brasil</a></p>
+    <p>Para acompanhar os cursos, acesse o <a href="https://www.youtube.com/cursoemvideo/" class="especial">Canal Do Curso Em Video</a></p>
+
+Começando com o corpo do documento, contendo só HTML, vamos criar um texto com um título e três parágrafos, com três links, note que o último link recebeu a atribuição de uma classe específica. O resultado visual é interessante pois por padrão os navegadores mostram links inéditos em azul e os já visitados em violeta. Todos os links aparecem sublinhados por padrão.
+Vamos alterar essa apresentação padrão com nossas configurações de estilo. Crie a área <style> dentro do <head. e coloque os seguintes seletores.
+
+        body{
+            font: normal 1em Arial, Helvetica, sans-serif;
+        }
+        a{
+            font-weight: bold;
+            text-decoration: none;
+            color: red;
+        }
+        a:visited{
+            color: darkred;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+
+Nas declarações acima, criamos três configurações para os links: a primeira(a) para os links inéditos, colocado o texto em negrito, removendo o sublinhado e colocando os em cor vermelha.
+
+No segundo seletor para links(a:visited) configuramos as âncoras já visitadas (com a pseudo-classe visited) nele, apenas mudamos a cor para vermelho escuro.
+
+Já na terceira declaração(a:hover) fizemos configurações para todos os links, quando passarmos o mouse por cima(pseudo-classe:hover) e o sublinhado volta a aparecer.
+
+ Por fim vamos adicionar algumas configurações relacionadas a classe especial, criada no documento HTML, para o terceiro link.
+
+        .especial:hover{
+            color: white;
+            background-color: black;
+            text-decoration: none;
+        }
+        .especial:before{
+            content: '>';
+            font-weight: lighter;
+        }
+        .especial::after{
+            content: '<';
+            font-weight: lighter;
+        }
+
+Na primeira declaração do código acima(.especial:hover) dizemos que o link de classe especial vai ter letra branca,fundo preto e perderá o sublinhado apenas quando movermos o mouse sobre ele.
+
+Nas proximas declarações(before e after), vamos adicionar um simbolo >antes e depois < usando os pseudo-elementos before e after, respectivamente.
+
+Mais Um Exemplo:
+Vamos criar mais um exemplo para o uso de pseudo-classes. Nosso HTML vai ter o seguinte corpo:
+
+    <h1>Conteúdo Especial</h1>
+    <div>
+        Passe o mouse aqui
+        <p>Surpresaaaaaa!</p>
+    </div>
+    <p>Veja o conteúdo oculto</p>
+
+Nós criamos um bloco especial com a tag <div>. Uma das grandes vantagens em usar divs é que elas podem ter outras tags dentro dela, assim como o parágrafo interno que criamos acima.
+
+Vamos criar nosso estilo agora, dentro da área <head>.
+
+        }
+        div > p{
+            display: none;
+        }
+        div:hover > p{
+            display: block;
+            background-color: yellow;
+        }
+O primeiro seletor vai esconder o paragrafo que está dentro da div(representando em CSS como div > p) através da propriedade display com o valor none.
+O segundo seletor, vai fazer o parágrafo escondido reaparecer, com o fundo pintado de amarelo apenas quando passarmos o mouse sobre ele.
+Toda vez que usamos o símbolo > em um seletor, indicamos os filhos(children) imediatos de um elemento. No exemplo HTML que criamos, dizemos que o primeiro parágrafo é direct children da div.
+
+Modelos De Caixa:
+O que é uma caixa? De forms simples e objetiva, baseado em um conceito chamado "box model", a grande maioria dos elementos HTML que temos no nosso site são como caixas. Elas são containers que armazenam conteúdos até mesmo de outras caixas.
+
+Anatomia de uma caixa: vamos analisar como uma caixa vai ser apresentada por todos os navegadores. Olhe atentamente o diagrama a seguir, que é exatamente o já citado modelo caixa:
+Margin,Outline,Border e Padding.
+tudo começa a partir do conteúdo(content), que representamos acima com o bla bla bla...por padrão, toda caixa é composta apenas de conteúdo e não possui padding, nem border, nem outline, e nem margin. uma exceção curiosa é o elemento <body> que já vem com uma margin de 8px.
+
+Todo conteúdo possui uma largura(width) e uma altura(height) e a esse conjunto de propriedades, damos o nome de box-size(tamanho da caixa). O tamanho da caixa não inclui as medidas de padding, border, outline e margin.
+
+Depois do conteúdo e de seu tamanho, vamos nos focar na borda que fica em volta dele. Ela pode ter uma espessura, uma cor e um formato.
+
+Entre a borda e o conteúdo - da borda para dentro - temos o preenchimento (padding) e da borda para fora, temos a margem(margin).
+
+Entre a margem e a borda, podemos determinar o contorno(outline) que é muito pouco utilizado, mas existe. Ele é um traçado visual que podemos criar fora da borde e o cálculo da sua espessura faz parte da margem estabelecida.
+
+Vamos criar um exemplo simples para exemplificar todos esses componentes, configurando as propriedades do modelo de caixa de um título <h1>. Acompanhe o trecho de código a partir das definições de estilo.
+
+    <style>
+        h1{
+            width: 300px;
+            height: 50px;
+            background-color: lightgray;
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+            padding: 20px;
+            outline-width: 30px;
+            outline-style: solid;
+            outline-color: blue;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Caixa</h1>
+</body>
+
+Todas configurações serão aplicadas ao elemento <h1>, que é uma caixa e foi criado na tag <h1> do código acima. Já as 2 primeiras linhas do </style> h1{
+configuram o size da caixa(largura-width e altura-height) e fará com que ela tenha 300X50 pixels.
+
+as linhas seguintes de Border, configuram uma borda sólida, vermelha e com 10 pixels de espessura.
+
+A linha do padding vai criar um espaço interno de preenchimento ( da borda para dentro) de 20 pixels no elemento e a linha margin vai criar um espaço externo (da borda para fora) de 50 pixels.
+
+As linhas do outline vão usar parte da margem para criar um contorno azul. sólido e com 30 pixels de espessura.
+Para calcula o tamanho total de um elemento de tela somes os tamanhos do conteúdo +preenchimento+borda+marge.
+
+Olhando de perto, podemos analisar as medidas configuradas no código apresentado. As medidas de Height e Width(300X50) são medidas apenas pela parte pontilhada do conteúdo.
+
+A border de 10 px ficou em vermelho e o outline de 30px ficou em azul. O padding de 20px fica da borda para dentro e a margin de 50px fica borda para fora.
+
+Sendo assim, a medida total que essa caixa vai ocupar é de 50+10+20+300+20+10+50=460px de largura e 50+10+20+50+20+10+50=210px de altura.
+
+Também podemos decorar as bordas com o border-image importando um arquivo e demais coisas, para isso tambem temos ferramentas como o slice e o repeat slice para cortar e o repeat para repetir.
+
+Existe a nova propriedade box-sizing onde podemos definir que as dimensões height e width não são medidas apenas apartir do conteúdo(content box) e sim pela borda(border-box).
+
+As configurações de borda e contorno também possuem shorthands para simplificar o código anterior. A ordem para as duas configurações é sempre a mesma para as duas shorthands:largura(width);estilo(style) e cor(color).
+Ou seja ao invés de:
+border-width:10px;
+border-style:solid;
+border-color:red;
+
+podemos usar
+
+border: 10px solid red;
+
+Preenchimento e Margem Personalizados:
+Todo elemento de caixa possui quatro valores para padding e quatro para margin, sempre nesssa ordem: superior(-top), direita(-right), inferior(-bottom), esquerda(-left). Quando colocamos um único valor de dimensão para o preenchimento ou margem, esse mesmo valor é aplicado simetricamente a todas as direções, mas também podemos fazer códigos como:
+ao invés disso:
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 20px;
+padding-left: 25px;
+use isso:
+padding: 10px 15px 20px 25px
+
+Um recurso que também vai ser muito usado em nossos exercícios é a centralização de blocos, para que isso seja feito, devemos pedir que o navegador calcule automaticamente as margens da esquerda e da direita para que o bloco seja colocado no meio do navegador, independente do tamanho da janela.
+
+Para centralizar uma caixa, usa a seguinte declaração no seu seletor:
+Margin:auto;
+
+Tipos de Caixa
+
+Dependendo do comportamento da caixa, podemos classificar um elemento em uma de duas categorias
+
+Caixa do tipo block-level
+
+um elemento dito block-level sempre vai se iniciar em uma nova linha e vai ocupar a largura total do elemento onde ele está contido. Se não estiver contido em nenhuma outra caixa, ele vai ocupar 100% da largura do <body>.
+
+O elemento block level mais conhecido é o <div> e suas variações semânticas modernas do html5, xomo <main>, <selection>,<aside> etc...
+
+Caixa do tipo Inline-level
+
+Um elemento do tipo inline-level não vai começar em uma nova linha, e sim no ponto exato onde foram definidos, e a largura dele vai ocupar apenas o tamanho relativo ao seu conteúdo.
+
+Text-align serve para alinhar o texto da forma que o programador quiser como por exemplo torna-lo centralizado(center) justificado(justify) e etc..
+
+No código abaixo:
+
+main{
+    background-color: white;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+}
+
+Vemos que temos um CSS de uma tag MAIN e que nela temos a margin auto para centralizar independente do tamanho da janela, um background color para facilitar leitura do conteúdo e width para determinar a largura da main, o padding serve para encorpar a main.
+
+Um exemplo harmônico de CSS a seguir:
+
+
+HTML:
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site De Exemplo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Site De Exemplo</h1>
+        <h2>Titulo 1</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores perspiciatis fugiat nam autem deserunt commodi porro illum repellendus fuga illo ullam vero quam, numquam nobis ratione laboriosam quis temporibus. Voluptas.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis nesciunt distinctio obcaecati illum ipsum impedit facere? Sint laboriosam, est ipsam corporis magni voluptate soluta quo inventore reprehenderit eveniet impedit iste!</p>
+        <h2>Titulo 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sapiente, inventore autem quibusdam nemo quas laudantium praesentium esse consequatur, nihil magnam voluptatem non iure aliquid dolores aspernatur ut quam veritatis.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa velit porro alias tenetur nulla dignissimos expedita necessitatibus delectus numquam commodi asperiores ad assumenda error facilis cum, sapiente, iste ipsum atque.</p>
+        <h2>Titulo 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati magni veniam enim, ex asperiores facilis natus debitis provident possimus animi a molestias error dolore illo officia alias et quibusdam consequuntur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor modi, sed dignissimos laboriosam nostrum assumenda, corrupti dicta accusantium magni voluptates doloribus porro deserunt temporibus labore obcaecati quisquam nemo numquam voluptate?</p>
+    </main>
+</body>
+</html>
+
+CSS:
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: linear-gradient(to right,#0CF25D,#038C3E);
+}
+main{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #03793694;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+}
+h1{
+    text-align: center;
+    color: #034159;
+    text-shadow: 1px 1px 2px #033346de;
+}
+h2{
+    color: #02735E;
+}
+p{
+    text-align: justify;
+}
+
+Para recortar um conteúdo use CTRL+X.
+
+Tipografia
+
+Uma boa forma de transmitir intenções  e emoções, assim como cores e imagens a escrita é uma forma importante de passar coisas a outras pessoas.
+
+Anatomia dos tipos, altura-x baseada nos tamnhos da letra x minúscula para usar de escala para as outras letras minúsculas, Altura das maiúsculas é separada e não tem escala, ascendente é o vazamento das letras minúsculas para cima além da altura-x, descendente é o vazamento das letras para baixo. Somando todas as alturas é a altura do corpo.
+
+Serifas são os "pézinhos" das letras de algumas fontes, serifa facilita a leitura das palavras, seu cérebro não lê as letras individualmente mas sim a palavra toda.
+Um conjunto de glifos se chama família, e tem fontes que tem familias tipograficas como light e bold.
+Categorias De Fonte
+Fontes serifadas são as com serifas.
+Sans-serif são fontes sem serifa.
+Monoespaçadas, pode ter serifas ou não, mas sua característica é todas as letras ter o mesmo tamnho.
+Handwriting, simula a caligrafia a mão.
+Display, fontes que não se encaixam em nenhuma das anteriores normalmente fontes simulando coisas também chamadas de fontes comemorativas.
+
+É importante usar sempre uma safe combination no caso mais de uma opção de fonte como abaixo:
+	body{
+          font-family: Arial, Helvetica, sans-serif, 
+        }
+
+Pois em alguns dispositivos pode ser que não haja uma das fontes escolhidas e o próprio navegador partirá para a próxima.
+
+Para saber as safe fonts combination basta pesquisar no google CSS Safe Fonts Combination.
+
+Também podemos declarar mais de um seletor no CSS.
+
+        h1, h2{
+            font-family: cursive;
+        }
+
+Tamanhos:
+font-size:
+Temos 2 formas de dar tamanhos a fontes sendo elas: absolutas e relativas.
+Absolutas(cm,mm,polegada(in),pixel, pontos e paica(pc))
+
+Relativas(em(tamanho atual da fonte),ex(referente a altura x de uma fonte),rem(relativo ao root a fonte que está configurada no body)vw(referente ao viewport), vh(altura do viewport) e %(referente a porcentagem da tela).
+
+Normalmente utilizar o em ou pixel, 16 pixels seriam o tamanho padrão do navegador e normalmente igual a 1em.
+
+Peso das fontes
+font-weight peso da fonte
+font-style estilo da fonte
+
+Pesos literais:lighter, normal, bold and bolder
+pesos numéricos: de 100 até 900
+
+font-weight substituí o negrito.
+font-style substituí o itálico.
+font-decoration substitui o underline.
+
+Shorthand
+
+simplificando por exemplo fontes.
+a ordem seria o font-style depois o font-weight depois o font-size e por último o font-family
+
+por exemplo:
+        body{
+            font-style: italic;
+            font-weight: normal;
+            font-size: 1em;
+            font-family: Arial;
+        }
+viraria
+        body{
+            font: italic normal 1em Arial, Helvetica, sans-serif;
+        }
+
+Usando Google Fonts
+
+Precisamos usar o @import junto da url que conseguiremos no google fonts
+
+    @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+Assim sempre dentro da tag Style e fora de um seletor.
+
+Normalmente usar de 3 a no máximo 4 tipos de familias de fontes.
+
+Fontes Baixadas
+
+Usar por exemplo o dafont.com para baixar fontes sempre olhar se elas suportam assentos.
+
+para usar a fonte nos seus códigos usar o @font-face e para usar deve-se declarar a fonte no source e o formato no format os fomatos são:
+'opentype'(OTF)
+'truetype'(ttf)
+'embedded-opentype'
+'truetype-att'(apple advanced typography)
+'svg'
+
+Um exemplo de como ficaria o código está abaixo:
+
+    @font-face {
+        font-family: 'Android';
+        src: url(fontes/idroid.otf) format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+Para identificar fontes em sites basta usar o ninja fonts.
+Para indentificar fontes em imagens use: whatfontis.com, fontsquirrel.com e myfonts.com
+
+Alinhamento de textos
+Centralizado(center) muito usado em títulos, justificado(justify) usado principalmente em parágrafos, alinhado a esquerda(left), a direita(right).
+text-indent:serve para colocar um afastamento do início de um texto.
+
+Seletores Personalizados
+
+Tudo que em HTML é id em css é #
+Tudo que em HTML é class em CSS é .
+
+A diferença entre ID e Class
+
+Id é único e class pode haver mais de uma.
+
+Você pode aumentar o alcance de classes colocando classes em mais de 1 elemento.
+Basta adicionar o titulo da outra classe ao lado da classe atual do elemento porém cuidado pois as configurações de id sobrepõem as de class.
+
+Pseudo Classes e Pseudo Elementos:
+
+height: altura
+width: largura
+
+Divs são espaços que ocupam a tela que podem conter conteúdo.
+shorthand para borda.             border: 1px solid black;
+				      largura tipo e cor.
+Para colocar as divs em linha basta usar um display inline-block.
+
+Pseudo classes são relacionadas ao estado de determinado elemento.
+Por exemplo:
+        div:hover{
+            background-color: rgb(194, 148, 194);
+        }
+Assim que passar o mouse sobre uma div ela mudará de cor para a cor escolhida no background-color.
+
+podemos também esconder textos em divs por exemplo:
+
+        div > p{
+            display: none;
+        }
+        div:hover > p{
+            display: block;
+            color: white;
+            background-color: red;
+            width: 200px;
+        }
+
+isso pode futuramente ser usado para a criação de menus flutuantes.
+
+Podemos também usar as pseudo classes visited para link que já foram visitados, active para links que estão sendo pressionados.
+
+Pseudo-Classe :
+Pseudo-Elemento ::
+
+Podemos também adicionar aos pseudo-elementos classes e colocar características especiais.
+
+Lembrando que sempre que queremos adicionar um filho a um elemento devemos usar o >.
+
+Grouping Tags e Semantic Tags
+
+A linguagem HTML padão tinha apenas duas de agrupamento genérico: a <div> e a <span>. A diferença básica entre elas é que a primeira é um elemento agrupador do tipo block-level e o segundo é inline-level.No mais, eles agem exatamente da mesma maneira, servindo para juntar vários outros HTML.
+
+Com o surgimento da HTML5, surgiram as tags semânticas de agrupamento. Isso não significa que as <div> e <span>(agora chamadas de não-semanticas) deixaram de existir ou ficaram obsoletas, mas seu uso agora faz menos sentido, pois temos tags para dividir as partes dos nossos documentos HTML.
+
+Vamos compreender a partir de agora os principais agregadores semânticos da HTML5.
+
+Podemos traçar uma linha ao redor da caixa e esta linha vamos chamar de border, e podemos usar um padding para ampliar um espaço entre o conteúdo e a borda e podemos também criar um espaço entre duas bordas que é o margin também podemos criar um traço entre a borda e a margin chamado outline.
+
+Temos dois tipos de caixa o box-level e o inline-level, box-level sempre se inicia em uma linha nova e sempre ocupa a largura total do navegador.
+E um inline-level ocupa o espaço restante da linha e também não pula linha se ele acabar e ainda haver espaço ele contínua o conteúdo após a caixa.
+Box Level(<div>,<h1--h6>,<p>,<main>,<header>,<nav>,<article>,<aside>,<footer>,<form> e <video>) Inline Level(<span>,<a>,<code>,<small>,<strong>,<em>,<sup--sub>,<label>,<button>,<input> e <select>).
+
+A ordem para alteração de padding, margin e etc... por meio de shorthands é cima, direita, baixo e esquerda.
+
+Podemos alterar as medidas de qualquer caixa.
+Todo elemento que quisermos no meio da tela usamos margin auto.
+Podemos também centralizar apenas a parte de cima, de baixo da direita ou esquerda trocando seu tamanho para auto.
+Podemos alterar caixas que de forma default seriam block para inline e vice versa manualmente por meio das CSS.
+
+Podemos colocar espaçamento entre as caixas, alterar suas cores individuais espaçamento margem e etc...
+
+Sombras
+
+Podemos usar o devtolls para facilitar visualização das sombras e também seus ângulos, já no código o primeiro fator é o deslocamneto horizontal o segundo o deslocamento vertical, o terceiro o blur e o quarto o spread, o ultimo é a cor, lembrando sempre de colocar certa transparênciana sombra.
+
+Vértices Arredondados
+
+Podemos determinar a quantidade do arredondamento por meio de pixels ou porcentagem, usando 50% vira uma bola.
+Para usar arredondamento usamos border-radius.
+As sombras se adaptam ao arredondamento perfeitamente, arredondamento pode ser feitos nos 4 vértices de forma individual, todos iguais ou em grupos de 2.
+
+Bordas Decoradas:
+            border: 22px solid black;
+Diz o tamanho tipo e cor da borda.
+            border-image-source: url(borda.png);
+Permite personalização da borda com imagens.
+            border-image-slice: 32;
+Fatiamento da borda.
+            border-image-repeat: repeat;
+Faz com que a imagem seja repetida diversas vezes.
+            border-image-repeat: stretch;
+Estica a imagem fazendo linhas.
+modo shorthand:border-image: url(borda.png) 32 repeat;
+
+
+
+
+Header
+
+Cria áreas relativas e cabeçalhos. Pode ser o cabeçalho principal de um site ou até mesmo o cabeçalho de uma seção ou artigo. Normalmente inclui títulos <h1> - <h6> e subtítulos. Podem também conter menus de navegação.
+
+NAV
+
+Define uma área que possui os links da navegação pela estrutura de páginas que vão compor o website. Um <nav> pode estar dentro de um <header>.
+
+MAIN
+
+É um agrupador usado para delimitar o conteúdo principal do nosso site. Normalmente concentra as seções, artigos e conteúdos periféricos.
+
+SECTION
+
+Cria seções para sua página. Ela pode conter o conteúdo diretamente no seu corpo ou dividir os conteúdos em artigos com conteúdos específicos. Segundo à documentação oficial da W3C, "uma seção é um agrupamento temático de conteúdos, tipicamente com um cabeçalho".
+
+Article
+
+Um artigo é um elemento que vai conter um conteúdo que pode ser lido de forma independente e dizem respeito a um mesmo assunto. Podemos usar um <article> para delimitar um post de blog ou fórum, uma notícia, etc...
+
+Aside
+
+Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo ou seção. Normalmente um conteúdo <aside> está posicionado ao lado de um determinado texto ou até mesmo no meio dele, exatamente como fizemos no bloco de texto apresentado anteriormente, falando sobre "MÚLTIPLOS NÍVEIS".
+
+Footer
+
+Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte diretamente do conteúdo nem é um conteúdo periférico (o que caracterizaria um <aside>), mas possui informações sobre autoria do conteúdo, links adicionais, mapa do site, documentos relacionados.
+
+A seguir, vou criar uma proposta de estrutura para um projeto de site. Não tome ela como a única possibilidade de criar o posicionamento de elementos de agrupamento semântico.
+
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>link link link...</nav>
+    </header>
+<main>
+    <section>
+        <article>
+            <h2>Título</h2>
+            <p>Texto Do Artigo</p>
+        </article>
+        <article>
+            <h2>Título</h2>
+            <p>Texto Do Artigo</p>
+            <aside>
+                conteúdo periférico do artigo
+            </aside>
+        </article>
+    </section>
+    <aside>
+        conteúdo periférico de site
+    </aside>
+</main>
+<footer>
+    conteúdo do rodapé
+</footer> 
+
+Analise o diagrama do lado esquerdo e o código do lado direito da imagem acima. Veja a hierarquia entre os elementos e quais deles estão dentro um do outro.
+
+Sombras Nas Caixas
+
+As sombras são muito úteis para dar volume, para dar a sensação de que as caixas estão ali realmente. para exemplificar, vamos criar o seguinte código base:
+
+    <style>
+        body{
+            font: 1em arial, helvetica, sans-serif;
+            background-color: peachpuff;
+        }
+        article#caixa{
+            background-color: snow;
+            width: 400px;
+            margin: auto;
+            padding: 1px 10px;
+            /*sombra aqui*/
+        }
+        </style>
+</head>
+<body>
+    <article id="caixa">
+        <h1>Usando Sombras</h1>
+        <p>Vamos aprender a usar sombras com esse exemplo simples.</p>
+    </article>
+</body>
+
+Olhando para o corpo da página, temos apenas um <article> com um breve conteúdo. A configuração de estilo faz com que esse artigo seja configurada como uma pequena caixa centralizada.
+Para criar uma sombra nessa caixa, vamos adicionar uma declaração especial na linha 17 aonde está o comentário.
+
+Veja que uma sombra bem forte já pode ser percebida, assim que adicionamos a propriedade box-shadow e seus quatro valores. A ordem é sempre essa:
+
+1.Deslocamento horizontal (h-offset): quanto a sombra vai andar para o lado direito(valores negativos causam deslocamento para a esquerda).
+2.Deslocamento Vertica (v-offset): quanto a sombra vai andar para baixo (valores negativos causam deslocamento para cima)
+3.Embaçamento (blur): quanto a sombra vai se espalhar pelo fundo.
+4.Cor(color): cor da sombra. É possível usar transparência.
+
+ Bordas Decoradas
+
+As bordas das caixas não precisam ser sempre retangulares e podem ter alguns detalhes especiais. Vamos usar o mesmo exercício que estamos criando desde o item anterior onde aprendemos a usar sombras.
+
+Vértices Arredondados
+
+Podemos arredondar os vértices usando uma declaração simples usando a propriedade border-radius. Adicione o seguinte comando ao seletor  do artigo do exemplo que estamos criando:
+
+            border-radius: 10px;
+
+Na declaração acima, todos os vértices foram levemente arredondados(10px) de forma simétrica. Se for necessário, podemos indicar quatro medidas diferentes, uma para cada vértice. Olhe atentamente para o resultado abaixo e perceba que cada ponta está diferente.
+
+border-radius:10px 20px 30px 40px;
+
+Assim como fizemos com as margens, também é possível indicar apenas dois valores, o que vai agir em vértices intercalados, partindo do canto superior esquerdo.
+
+border-radius: 10px 30px;
+
+Primeiro Mini Projeto
+
+A ideia inicial é criar uma espécie de site de noticias, só que com uma notícia só. O objetivo é apenas ensaiar como organizar o conteúdo e aprenseta-lo em forma de página web.
+
+Tudo começa desenhando o que chamamos de wireframe, planejando qual vai ser a estrutura e comportamento do site. Ele vai servir de base na hora de planejar as caixas que farão parte da página. Para esse primeiro projeto o layout será o seguinte.
+(Meu Caderno - Primeiro Projeto Wireframe)
+
+Em seguida vamos decidir a paleta de cores que será utilizada. Optei por uma paleta baseada em monocromia a partir de tons de verde(já que vamos falar sobre android).
+
+Por fim vamos falar das fontes escolhidas. A primeira, Bebas Neue, será a fonte para os destaques principais. Já que vamos fazer uma matéria sobre o mundo Android, optei por uma fonte chamada Idroid. Já para o texto o padrão será arial.
+
+Ainda que tenha optado por criar um projeto simples, não vamos abrir mão da responsividade.
+
+Largura e altura adaptáveis, se não configurarmos a largura por exemplo, ela vai ocupar 100% do seu container. Porém, para que nosso site se adapte mais facilmente ao tamanho da tela, uma das técnicas básicas que podem ser utilizadas é deixar algumas caixas estrategicamente um pouco mais flexiveis indicando valores mínimos(min-width/min-height) e máximos (max-width/max-height). para o nosso projeto, vamos definir limites da largura da caixa <main> onde estará contido o conteúdo principal do artigo.
+				min-width: 400px;
+				max-width: 800px;
+A configuração acima vai garantir que a caixa em questão não fique com largura menor que 400px(para telas pequenas) e nem que seja maior que 800px(para telas grandes).
+Para medidas entre 400px e 800px, o tamanho será adaptável e a caixa vai ocupar 100% da largura do contêiner. Isso vai facilitar bastante a adaptação do conteúdo a diversos tipos de tela.
+
+Variáveis em CSS: Com essa dica, você vai levar suas folhas de estilo ao outro nível, Vamos aprender a utilizar variáveis personalizadas no CSS para cadastrar os esquemas de cores e fonte do nosso site e isso vai facilitar muito na hora de efetuar eventuais mudanças estéticas no nosso site.
+
+Para criarmos variáveis para nossas configurações, devemos definir uma área de definições dentro do seu estilo para pseudo-classe chamada:root, que definem as configurações para a raiz de uma árvore, que vai servir para o documento inteiro.
+
+Note que, pelas declarações criadas a baixo, definimos nove variáveis com as configurações de cores e fonte que definimos anteriormente.
+
+    <style>
+        :root{
+            --cor0: #c5ebd6;
+            --cor1: #83E1AD;
+            --cor2: #3ddc84;
+            --cor3: #2fab66;
+            --cor4: #1a5c37;
+            --cor5: #063d1e;
+            --fonte0: Arial,Helvetica,sans-serif;
+            --fonte1: 'Bebas Neue', cursive;
+            --fonte2: 'Android', sans-serif;
+        }
+
+A partir de agora, definir cores e fontes em nossos elementos html ficará mais fácil e personalizavel, utilizando a função var().
+
+        body{
+            font-family: var(--fonte0);
+            color: var(--cor0);
+            background-color: var(--cor1);
+        }
+
+Olhandos as declarações feitas para o seletor de body acima, pode parecer inicialmente que elas ficam um pouco mais confusas. Mas imagine que seu cliente mude as definições de cores e fontes. Quantas alterações teriam que ser feitas para deixar tudo em dia com as novas especificações: ao usar variáveis, tudo se simplifica muito, pois basta atualizar as variáveis definidas no :root.
+
+Uso do seletor * em CSS: Existe também um seletor especial das CSS que é o *, ele tem uma função muito especial, pois basicamente ele aplica uma configuração padrão a TODOS os elementos do código HTML ao qual o estilo está sendo aplicado.
+Exemplo:
+	*{
+	  font-family: Arial;
+	 }
+Todas as fontes do site serão padronizadas.
+
+No nosso caso, para o nosso mini-projeto, nós vamos utilizar esse seletor global para eliminar as eventuais margens que os navegadores(user agents) adicionam a alguns elementos. Isso vaifacilitar bastante, pois vai permitir personalizar as medidas que vão aparecer na tela para cada elemento individualmente.
+
+Espaçamento entrelinhas em Textos
+Outra configuração muito importante que podemos fazer para textos muito longos é o de espaçamentos entre as linhas do nosso texto. Usando a propriedades line-height,podemos dizer qual é o tamanho do espaço entre uma linha e outra no texto. o valor padrão na maioria dos navegadores é algo próximo a 1.2em.
+
+Sombras em textos saiba que existe uma propriedade específica para criar sombras em textos o text-shadow.
+
+A propriedade text-shadow também pode ter quatro parâmetros principais
+1.Deslocamento horizontal(h-offset)
+2.Deslocamento vertical(v-offset)
+3.Embaçamento(blur)
+4.cor(color)
+
+Personalizando ainda mais listas: Já aprendemos a criar listas agora veremos como personalizar e criar um ótimo resultado visual.
+No nosso projeto, queremos adicionar uma lista com todas as 14 versões principais do sistema andorid. Se fizermos usando apenas os elementos comuns sem configurá-los, teremos uma listagem que ocupa grande espaço vertical. A solução aqui é dividir a lista em duas colunas e modificar o marcador para personalizar ainda mais a exibição do conteúdo.
+
+        ul{
+            list-style-type: '\2714\0020\0020';
+            columns: 2;
+            list-style-position: inside;
+        }
+
+A primeira linha de declarações faz com que o marcador seja personalizado com o parâmetro list-style-type. o valor \2714 corresponde ao símbolo (feito) que tem o código unicode U+2714. O valor \0020 corresponde a um espaço em branco(também pode ser \00a0).
+A segunda declaração vai organizar a lista em duas colunas. O total de elementos da lista com <li> será dividido em duas partes iguais (ou quase) e o resultado será colunado.
+Por fim, a última declaração vai fazer com que os marcadores sejam exibidos na parte interna da caixa que contém a lista. Analise e perceba que por padrão a caixa de uma lista não inclui os marcadores. Alteramos essa característica usando a declaração list-style-position com o valor inside, já que a lista vai estar dentro de um <aside> no nosso documento HTML.
+
+Videos do youtube mais flexíveis aprendemos anteriormente como deixar imagens mais "flexiveis" usando a tag <picture>. Também aprendemos a adicionar videos usando várias técnicas, inclusive aqueles que estão hospedados em serviços especialiazados como youtubr.
+
+O problema é que, quando incorporamos um vídeo do youtube, isso é feito através de uma tag <iframe> que já vem com as configurações de um tamanho fixo e precisamos alterar isso para que nossa interface possa se tornar mais responsiva e adaptar o tamanho do video dinamicamente, principalmente para telas pequenas.]
+
+Para isso, vamos colocar o <iframe> de incorporação dentro de uma <div> para que o vídeo esteja limitado dentro de um contêiner.
+    <div class="video">
+	iframe vai aqui
+    </div>
+
+        div.video{
+            position: relative;
+            background-color: var(--cor4);
+            height: 0px;
+            margin-left: -20px;
+            margin-right: -20px;
+            margin-bottom: 15px;
+            padding-bottom: 59%;
+        }
+        div.video > iframe{
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+        }
+
+O que nos importa mais aqui é entender o funcionamento da propriedade position, que é a única que não vimos até aqui, O valor padrão para essa propriedade é static, que mantém a hierarquia conforme estabelecido no documento HTML.
+No div nós colocamos o valor como relative para que seja considerado o posicionamento atual do elemento de divisão e que ele se mantenha adaptável para o caso de alteração no tamanho do navegador.
+
+Já dentro do iframe, nós usamos o posicionamento absolute para que a div que é seu contêiner torne-se o ponto de partida para o posicionamento do frame. A partir daí, podemos utilizar propriedades para configurar o deslocamento a esquerda e ao topo e seu tamanho e largura, todos em porcentagem de tela.
+
+Fontes Personalizadas:
+Para fontes personalizadas usamos @font-face e logo em seguida
+damos um nome para a fonte no font family, ai vamos para o source e na url colocamos o arquivo da fonte e no format seu formato, font weight determina o tamanho dela e font style seu estilo por exemplo itálico.
+
+Mockflow usado para planejar o site por meio de wire frames.
+
+Podemos fazer configurações globais por meio do *{ para por exemplo deixar todos os blocos sem margem, outra coisa que podemos é usar da sub-classe root para criar variáveis a serem usadas no nosso site por meio do código var(), podendo assim padronizar fontes e cores, usando o inspecionar e alterando o tamanho da janela podemos ver a largura e altura do nosso site no canto superior direito.
+
+Responsividade Para Sites:
+
+Colocar largura máxima e mínima em seu site para telas de tvs e celulares, com a tag picture adaptar imagens para torná-las responsivas.
+
+Para navegar entre pastas pelo css basta usar . e / ou seja para voltar uma pasta ../ para permanecer na mesma pasta ./, por meio das configurações globais podemos deixar margin e padding como quisermos, no background-image podemos fazer variaveis com var() também vale lembrar os códigos das direções to right(direita), to left(esquerda) to top(para cima) e to bottom(para baixo), podemos dentro de um header delimitar altura mínima e maxima com max e min, podemos alinhar textos nas próprias box bastar usar um text-align, podemos delimitar paddings específicos para delimitadas áreas como left,right,top e bottom, podemos delimitar a transparência de uma sombra por meio de códigos rgba 0.valor desejado, podemos usar border radius em navs pois também são caixas. 
+Para retirar a decoração de links basta usar text-decoration:none;
+podemos também delimitar a duração de uma transição entre um hover e outro, para configurar um hover em uma nav basta usar o comando nav > a:hover, para afastar seu main do footer basta usar margin-bottom, podemos delimitar sua largura e altura maxima e minima também.
+Para tornar uma imagem mais responsiva basta usar main img{width:100;} pois ai ela usará o máximo de largura do main, para fazer uma imagem menor ou maior que outra basta colocar uma classe nela e delimitar seu tamanho em um width por exemplo main img.class{width:50%} ou o max width referente ao tamanho da imagem, para transformar um elemento em um bloco basta usar display: block; e para centralizar esse elemento por meio de uma margin antes deve-se torná-lo um bloco.
+Podemos fazer também linear gradient para o transparente dando um efeito muito interessante basta fazer o gradient entre a cor escolhida e "transparent", podemos dar um espaço para os textos por meio do text indent.
+Podemos colocar um emoji para sinalizar links externos em nosso site, para isso basta dar uma classe a estes links como external e declarar os links de classe externa depois dele(a.external::after) terão o emoji "\1f517" por exemplo para dar um espaço entre o emoji e o texto basta colocar \00a0 antes ou depois do emoji ai dependerá de onde você deseja o espaço, podemos também juntar dois blocos esteticamente por meio de margens negativas vazando de um bloco para outro para isso devemos usar o dev tools, podemos personalizar listas usando a tag list style type para colocar um emoji como verificador, para alterar a posição do verificador da lista podemos usar o list style position inside ou outside, para alterar o número de colunas basta usar a tag columns e digitar o número desejado de colunas.
+Para conseguir alterar iframes devemos fazer algo como uma gambiarra o primeiro passo é colocar o iframe dentro de uma div, então colocamos uma classe nesta div como video, após isso vamos para a parte de CSS e colocamos primeiro as configurações da div, podemos colocar um background color, colocamos uma margin adaptada para ela colar no main, um padding para acomodar o conteúdo, um padding bottom em % ai o valor dela vai ser avaliado por você e a posição desta div será relative, após isso fazemos um div.video > iframe e colocamos sua posição como absoluta, colocamos uma tag top e left em % do valor mais comodo após os testes, e finalmente um height e width também em % de um valor comodo e desejavel pelo cliente.
+
+Módulo 3
+
+Repositórios são locais onde guardamos arquivos existem os locais e remotos, repositório local seria no computador como o git, e repositório remoto seria um servidor como github, é possivel transformar repositórios privados em públicos, também é possível apagar repositórios mas para isso devemos fazer pelo próprio github desktop, basta ir em repositório e em remove mas isso apagará apenas o repositório local o repositório remoto deve ser apagado da sua conta github.
+Hospedando o site pelo github pages.
+CTRL+CLICK seleciona a pasta.
+Podemos ter links diferentes para cada repositorio.
+Podemos transformar urls em qrcodes usando o site qr code generator.
+Github pages tem compatibilidade apenas com html,css e javascript sem compatibilidade com banco de dados e php.
+Manutenção em sites pelo github.
+Basta alterar nosso arquivo original e levar as atualizações para o github como já aprendemos, claro a hospedagem levará tempo para atualizar a mudança, no nosso site anterior estavamos com um erro no header p pois estava com um margin-bottom o que não seria adequado para esse caso e sim um padding-bottom pois o padding leva a nav para baixo coisa que o margin não faz impedindo nosso site de quebrar.
+Como abrir um projeto em outro computador, instalar vscode,git,github desktop, abrir o github desktop,clicar em files, então ir na área accounts, logar, após isso clicar em file e options, ir em git e save, clique no repositório desejado e então clique em clonar crie uma pasta nova e escolha aonde salvar seus arquivos,
+para sair basta ir em repositório e em remove, eliminar para lixeira,após isso clique em file, options e signout, git apagar os dados, 3 coisa esvaziar a lixeira.
+
+Imagens De Fundo
+
+Podemos colocar fundos de diversas maneiras como background-imagem, background-color e background-image:linear gradient, podemos colocar fundos em divs ou no próprio body do site, para orientar as divs podemos usar a tag display para definir sua orientação como block ou inline-block.
+Podemos usar classes e ids para colocar mesmas divs com configurações semelhantes na classe mas com configurações individuais pelos ids.
+Background-size determina o tamanho de sua imagem podemos configurar ele com %, vh e pixels.
+background-repeat permite configurar a repetição do seu fundo, o padrão dela é repeat, mas podemos colocar no-repeat que ele não repetirá o background, repeat-x que repetirá o fundo apenas em cima e repeat-y que repetirá a imagem apenas na lateral esquerda. Podemos usar tbm a space que repetirá a imagem espaçada.
+O padrão de repetição sempre partirá do canto superior esquerdo.
+Podemos também usar a background-position para posicionar nossa imagem com alguma referência por exemplo left top que é o padrão ou center center para manter sempre ela centralizada.
+No background-size pode usar duas medidas não numéricas que são contain e cover, contain prioriza mostra a imagem completa mesmo que para isso deixe barras pretas no conteúdo e cover prioriza cobrir o fundo inteiro mesmo que tenha que cortar a imagem de alguma forma.
+Shorthand background tem uma ordem que é color,image,position,repeat,size,attachament porém os navegadores ainda não suportam o background size na short hand então temos que colocar separados.
+Centralização Vertical De Caixas margin só serve para o alinhamento horizontal para resolver este problema devemos utilizar posições, o conatiner vai ter uma posição relativa e o conteúdo terá uma posição absoluto, em box de posicionamento absoluto podemos colocar duas tags que são left e top podemos usar valores de % e etc... nelas após isso vamos na caixa de conteúdo e usamos transform translate para mudar o eixo de direcionamento da imagem(podemos usar a imagem target.png para nos orientar nesse meio) podemos usar pixels e % no transform usando -50% tanto na esquerda como em cima centralizamos perfeitamente a div. Exemplo de passo a passo:
+Container:
+            position: relative;
+
+Conteúdo:
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+Projeto Cordel Moderno
+
+SHIFT+Z envolve com abreviação.
+
+para colocar tudo para letra maiúscula podemos usar text-transform uppercase, podemos usar também font-variant:small-caps tudo também ficará em maiusculo porém as iniciais ficarão maiores;
+Para fazer o famoso efeito parallax basta usar fixed no background-attachment, podemos usar uma altura minima para facilitar para dispositivos moveis e medila em vh que é viewportheight, podemos usar fontes de tamanho variante ao tamanho da tela assim podemos usar vw viewportwidth e o valor vem por padrão em pocentagem por exemplo 10vw é 10% da largura da viewport, podemos usar vh também nos paddings, usar espaço entre linhas com line-height, para fazer uma sombra para dentro usamos box shadow inset, para colocar um texto dentro de uma imagem basta usar o sistema inline-block.
+
+TABELAS
+
+Nunca usar tabelas para a estrutura do site.
+Tabelas são para exibição de dados mas não para estrutura, todas as tabelas tem a seguinte hierarquia:
+Table(tabela)
+ Table Rows(linhas da tabela)-<tr>
+  Table Header(cabeçalho da tabela)
+   Table Data(dados da tabela)-<td>
+
+Podemos no CSS no elemento table usar border-collapse: collapse para juntar as tabelas ficando mais esteticamente parecido com excell o default desta tag é separate. Se a hierarquia não for obedecida os dados vão aparecer ou antes ou depois da tabela,podemos usar também vertical-align para alinhar verticalmente os elementos seu default é middle ou meio.
+No excell números sempre ficam alinhados na direita podemos fazer isso usando uma classe número e alinhando eles a direita.
+Aprendendo a usar tabelas semânticas:
+Table
+ Caption(legenda Da Tabela)
+ Thead
+  Tr,Td,Th
+ Tbody
+  Tr,Td,Th
+ Tfoot
+  Tr,Td,Th
+Podemos separálos assim como divs facilitando sua leitura e entendimento.
+Th é usado para títulos de dados e não dados.
+Scope serve para informar aonde os dados daquele título estão se na mesma coluna(col) ou linha(row) serve para os mecanismos de busca.
+Grupos devem ser colocados como colgroup ou rowgroup.
+Para fazer o efeito zebrado basta usar a subclasse nth-child() e entre parenteses colocar a quantidade de linhas a ser modificada, se colocarmos 2n 1 a cada duas linhas ficará modificada, se colocarmos 3n uma em cada 3 e assim por diante. Podemos usar também impar(odd) e par(even).
+Cabeçalho fixo em tabelas grandes, a tabela deve ter um posicionamento relativo, depois fazemos uma configuração thead > tr > th{ e nela colocamos position sticky top: -1px, isso só irá colar as palavras devemos fazer também uma configuração de background. Melhor usar apenas para tabelas grandes e com muitas colunas.
+Mesclagem de Células
+Podemos por exemplo fazer um elemento sofrer expansão em forma de coluna ou linha, para fazer em forma de coluna basta usar colspan e falar quantidade de colunas que quer expandir. Para expandir as linhas basta usar rowspan e dizer a quantidade de linhas.
+
+É possível centralizar uma tabela na tela usando de uma div como visto na tabela 006.
+Colgroup tag usada para agrupamento de colunas. nela iremos usar a tag col e dando uma classe para cada coluna indicado colocar coisas que representem o objetivo por exemplo para a coluna nome usar cnome e etc... após isso basta declarar no style essa classe e colocar as modificações desejadas, podemos usar a tag span após a classe para colunas terem configurações iguais. como             *\*\<col class="cnome" span="4">\*\*.
+Podemos adicionar uma rolagem apenas na tabela usando a tag div envelopando a tabela e então dando a característica overflow-x: auto; a essa div assim o conteúdo principal da página não será afetado.
+CTRL+SHIFT+F no github desktop abre o explorador de arquivos.
+Iframe é um quadro em nosso site que podemos exibir coisas como outros sites ativamente(se eles não tiverem um bloqueio para isso) entre o iframe e o fechamento da tag sempre é bom colocar mensagens ou links de referência pois nem todos os navegadores ou dispositivos são compatíveis.
+O tamanho padrão de um iframe é 300px por 150px mas isso pode ser alterado no estilo.
+scrolling pode ser configurado para o iframe como auto, yes ou no. Sendo auto o padrão.
+frameborder tem apenas dois valores, 0 que esconde a borda ou qualquer número que aí mostrará a borda. Mas podemos personalizar ela nas CSS.
+Podemos usar iframes para abrir páginas secundárias de nosso próprio site.
+Podemos por meio da junção de link e iframe fazer com que um link ao invés de abrir em uma nova página abrir dentro de um iframe para isso obviamente precisamos de um link e um iframe, no iframe colocaremos um atributo name e um nome dentro dele, após isso na tag <a> colocaremos um target e dentro dele colocaremos o nome que demos ao iframe anteriormente.
+Para conteúdos estáticos podemos usar ao invés de src um srcdoc no nosso iframe e dentro deste podemos colocar códigos html para deixar uma tela estática enquanto o usuário não escolhe um link para clicar.
+Inconvenientes dos iframes existem problemas na indentificação de iframes pelo googlebot, há problemas também de acessibilidade softwares de ajuda a pessoas cegas por exemplo tem dificuldade em indentificação do conteúdo em iframes, cuidado com os sites que você abrir a porta no seu site.
+Tornando iframes mais seguros podemos impedir o envio dos dados por meio do elemento sandbox que recebe sandbox dentro do iframe.
+Podemos usar também referrerpolicy="no-referrer" isso vai fazer com que o que está dentro do iframe não colete nenhum tipo de informação do usuário.
+sandbox="allow-same-origin" permite apenas aqueles dados coletados se o site no iframe for do mesmo servidor que o seu(também é necessário outras permissões como allow-forms allow-scripts).
+Guardar para iframes de forma responsiva:
+
+<div style="padding: 56.25% 0 0 0;position: relative;">
+
+<iframe src="" style="position: absolute; top:0; left:0;width:100%;height:100%;">
+
+Podemos usar as configurações de largura e altura para alterar o tamanho do vídeo.
+Podemos também adicionar mapas ao nosso site por meio do iframe.
+
+Mini Projeto Redes Sociais
+Podemos usar para nos orientar no tamanho do background o tamanho da imagem basta abri-la no gimp e ir em propriedades.
+Para fazer uma tela caber em outra basta alinhar os pixels com top,left,width e height e após isso usar um background cover na imagem que está sendo reproduzida.
+Podemos esconder a scrollbar por meio do estilo   
+
+::-webkit-scrollbar{
+       width: 0px;
+       height: 0px;
+   }
+
+Se colocarmos um display block em um link ele ficará em um bloco separado abaixo, podemos usar text-align para link mesmo eles sendo em formato de imagem. podemos usar o transform translate para simular o movimento de um botão.
+podemos fazer com que a borda faça parte do bloco usando box-sizing: border-box.
+Podemos usar transition para o aparecimento da borda ou o transform de um hover.
+
+Formulários
+Temos sempre que criar a tag form então após isso colocamos o texto desejado dentro de um parágrafo ou etc... e ao lado um input que é o que irá receber o que será digitado.
+Inputs sempre devem ter um nome e um id, temos também o botão de envio que será de tipo submit e seu value é o que você quer que tenha escrito no botão.
+Temos que ligar os campos a seus inputs para facilitar para o navegador.
+Podemos desativar o autocomplete  por meio do elemento autocomplete="off"
+Precisamos enviar os dados para algum lugar por exemplo um servidor php.
+como usar os label "etiquetas" sempre no id colocar um i na frente por exemplo inome sempre relacionamos o label ao input, os dados estão no link caso em method="get" que é o default, também existe o metodo "post" que é um pouco mais seguro mas é fácil pegar os dados pelo inspecionar, get serve quando os dados não forem sensíveis para quando o link possa ser compartilhado e get também tem um limite de 3000bytes ou outros tipos de arquivos, porém o post serve para dados sensíveis, outros tipos de arquivos e documentos maiores que 3000bytes, lembrando que é melhor aprender https para mais segurança no futuro.
+Também temos o input de senha que é o password, podemos também usar o input reset que seria o botão de limpar a tela.
+Para tornar um  input obrigatório usamos required dentro do input.
+Podemos também colocar requerimentos de minimo e maximo de letras usando minlength e maxlength.
+Podemos usar placeholders para colocar coisas dentro das caixas de texto.
+Podemos também usar autocomplete dentro dos inputs que servem para dizer au navegador o que cada caixa é por exemplo usuário usa username e senha pode ser usada current-password quando é login ou new-password quando é cadastro.
+Quando é par números usamos min e max apenas e não minlength etc...
+Podemos também usar step para mostrar de quanto em quanto o número aumenta por exemplo 0.5 ele não aceitará 8,2 e sim 8 ou 8,5.
+Podemos usar também o input month para colocar por exemplo o mês de algo.
+Podemos usar o elemento value para deixar um valor médio já preenchido porém ele desativa o placeholder.
+Podemos usar também o input date que tem como espaço para dia,mês e ano, primeiro ano, dps mês e por último dia.
+Para horário precisamos usar o input time.
+Sempre verificar na maioria dos navegadores pois pode haver incompatibilidades.
+Estudar mais sobre Regex.
+Toda expressão regular começa com uma ^ e termina com um $ e deve estar dentro de um pattern, podemos usar a expressão \d para significar digitos, usar - para representar traços, a quantidade de digitos fica entre {} e para abrir aprenteses é (\ e fechar \) podemos agrupar formulários em <fieldset> fazendo uma caixa ao redor dos elementos e também usar a tag <legend> para colocar um titulo no agrupamento.
+Para fazer o input de selecionar os dados basta fazer um input:checkbox lembrando da importância dos labels.
+Temos também o input:radio que permite marcar apenas uma das opções lembrando que para ele funcionar os objetos devem ter o mesmo name(não confunda com id) e um value, para deixar alguma objeto já marcado basta usar checked deixando por padrão, lembrando que em checkbox podemos ter mais de um marcado como check porém em radio não por permitir apenas 1.
+Podemos ter inputs para cor tbm e nele podemos botar um value para uma cor padrão porém o valor deve ser colocado em hexadecimal.
+Temos também o input:range que serve para colocar por exemplo níveis de satisfação pré-determinados podemos configurar esses níveis por meio de min e max por padrão ele fica no meio termo mas podemos colocar por meio do value um valor padrão.
+Por meio do input:file podemos enviar arquivos porém para ele temos que usar o método post.
+Podemos também usar o input search para fazer pesquisas em nosso site.
+Também podemos usar <option> aonde teremos um value que será o valor passado ao servidor e temos um valor dentro do option que será o valor mostrado ao usuário, podemos também agrupar elemento em grupos colocando os elementos desejados dentro de um optgroup e com um label dizendo o título do grupo por exemplo, lembrando que acima deve-se ter uma tag <select>:
+
+        <optgroup label="Região Sul">
+            <option value="RS">Rio Grande Do Sul</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="PR">Paraná</option>
+        </optgroup>
+
+Podemos também deixar um estado pré selecionado usando o atributo selected, datalist é um elemento que permite o uso de digitação e seleção, podemos usar option e input text, primeiro o label, input e por ultimo datalist com options dentro por exemplo:
+
+        <label for="iprof">Profissão:</label>
+        <input type="text" name="prof" id="iprof" list="lstprof">
+        <datalist id="lstprof">
+            <option value="ADM">Administrador</option>
+            <option value="CONT">Contabilista</option>
+            <option value="DEV">Desenvolvedor</option>
+            <option value="PROF">Professor</option>
+        </datalist>
+
+Text área é para mensagens longas e podemos configurar o tamanho de letras e linhas, também o ideal para esse método post, para usar deve-se usar label e um for="imsg" e após isso um textarea.
+Podemos usar placeholder em textarea para facilitar o entendimento do usuário.
+Podemos usar output para gerar resultados junto a JavaScript, por exemplo:
+
+
+        <label for="in1">Número 1:</label>
+        <input type="number" name="n1" id="in1" required min="0" max="50" 	oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        <br>
+        <br>
+        <label for="in2">Número 2:</label>
+        <input type="number" name="n2" id="in2" min="0" max="50" required 	oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        <br>
+        <br>
+        <label for="isoma">soma:</label>
+        <output id="isoma">0</output>
+<oninput(dentro do input)="id.innerHTML(dentro de HTML) = Number(id1.value) + Number(id2.value)">
+
+Output não é para calcular e enviar dados mas sim para mostrar resultados ao usuário.
+
+Podemos usar input em um range para mostrar o valor a ser exibido basta botar um output e um oninput dentro de um input aonde usaremos um código javascript nele usaremos oninput="id.innerHTML = Number(id.value)">.
+
+Podemos também usar usar funções no script:
+
+    <h1>Exercicio De Formulário</h1>
+    <label for="iano">Em que ano você nasceu?</label>
+    <input type="number" name="ano" id="iano" min="1900" max="2024" oninput="calcIdade()">
+    <br>
+    <br>
+    <label for="iidade">Sua idade é:</label>
+    <output id="iidade">0</output>
+    <br>
+    <br>
+    <input type="submit" value="Enviar">
+    <br>
+    <br>
+    <input type="reset" value="Limpar">
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
+
+Como visto acima é necessário o uso de script.
+
+Midia Query
+
+Permite que um mesmo site tenha diversos estilos para dispositivos diferentes.
+Podemos fazer 2 estilos diferentes para as páginas e então basta colocar o atributo midia no link css e selecionar por exemplo screen ou print esses são os chamados midia types, e então poderemos fazer configurações isoladas para cada uma das midias por exemplo tirando o menu da impressão usando do menu{dsplay:none;}, podemos colocar mensagens específicas para impressão usando content, e estilos especificos para telas.
+
+Midia Features
+
+Midia Query = midia type + midia feature.
+Midia feature são características de tela.
+Quando usamos o atributo media podemos informar os media types e ao adicionar um and e () podemos dentro dos parênteses adicionar um midia feature isoladamente, para cada media feature necessita de um parêntese separado. Por exemplo:
+    	
+	<link rel="stylesheet" href="estilos/paisagem.css" media="screen and 	(orientation:landscape)">
+
+Por meio disso podemos fazer configurações individuais para cada estilo.
+Também em projetos menores podemos manter todos os estilos em um só CSS.
+Por exemplo:
+
+        /*Declarações Retrato*/
+        @media screen and (orientation: portrait){
+            
+        }
+
+        /*Declarações Paisagem*/
+        @media screen and (orientation: landscape){
+            
+        }
+
+Podemos também fazer dessa forma em uma pasta de estilo separada. 
+
+Mobile First
+
+Uma outra forma de criar sites pensando primeiramente nos dispositivos móveis otimizando os recursos e evitando perder conteúdos e features importantes.
+
+Typical device breakpoints
+/*Typical Devices Breakpoints
+Pequenas Telas:até 600px
+Celular: min 600px até 768px
+Tablet: min 768px até 992px
+Desktop: min 992px até 1200px
+Grandes Telas:min 1200px
+*/
+
+Lembrando que não é possível adicionar background image em print.
+Podemos esconder elementos específicos da tela por exemplo:
+
+@media screen and (min-width: 1200px){
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main{
+        width: 700px;
+    }
+    img#tele {display: none;}
+    img#telv {display: block;}
+    img#impr {display: none;}
+    img#desk {display: none;}
+    img#tabl {display: none;}
+}
+
+Podemos como visto acima também colocar mínimo e máximo de tamanho de tela.
+
+Podemos colocar alguns icones em nossos sites basta usar o     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> no seu head, após isso usar         <span class="material-icons"></span> no seu html e dentro do >< colocar o nome do icone a ser utilizado esse nome você pode pegar por meio do 
+https://fonts.google.com/icons?selected=Material+Icons:menu:&icon.size=28&icon.color=%23e8eaed&icon.platform=web.
+
+Para fazer menu hamburguer basta usar uma função em javascript, para isso damos um id para o menu e um id para o span, então colocamos uma função onclick="clickMenu()" dentro do span e abaixo do main basta colocar:
+    <script>
+        function clickMenu(){
+            if (itens.style.display == 'block'){
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+    </script>
+
+
+Podemos usar o atributo float seguido de um width e um height para alterar a ordem de containers pelo CSS, esse width e height pode ser medido em porcentagem. Para fazer isso ambos os containers devem estar como display block.
+Podemos fazer animações por meio das CSS usando o atributo transition e width valor desejado em segundos, height valor desejado em segundos, também podemos utilizar a transition-timing-function: para adicionar fluidez a essa animação por exemplo utilizando o ease para trazer maior fluidez e não ser abrupta.
+
+Podemos por meio das CSS tornar um link um botão, para declarar um input nas CSS basta usar input[type:tipo de input]{ podemos por meio do hover alterar completmente a estrutura do botão.
+SHIFT+ALT+SETA permite dar um control c e control v de uma linha acima ou abaixo dela.
+ALT+SETA move a linha para a direção desejada.
+CTRL+SHIFT+K apaga a linha atual.
+CTRL+D multi seleção
+
+focus-within permite quando o objeto esteja em foco alterar algumas configurações relacionadas a ele como por exemplo um input de texto selecionado.
+sempre que usar transform colocar a linha no final do seletor pois isso impedirá bugs em alguns dispositivos.
